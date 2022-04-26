@@ -56,6 +56,22 @@ h2{
     margin: 2% 2% 2% 2%;
     border-radius: 5px;
     box-shadow: black 4px 4px 0px 0px;
+    text-decoration: none;
+}
+
+.link-text{
+    text-decoration: none;
+    color: white;
+}
+
+.link-text:active{
+    text-decoration: none;
+    color: white;
+}
+
+.link-text::after{
+    text-decoration: none;
+    color: white;
 }
 
 .buttons:active{

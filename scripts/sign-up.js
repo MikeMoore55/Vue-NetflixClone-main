@@ -20,7 +20,7 @@ const component = {
   `
     <div>
         <form>
-            <h2>Login!</h2>
+            <h2>Create an Account!</h2>
             <label for="userName">UserName:</label>
             <br>
             <input id="userName" type="text">
@@ -40,5 +40,5 @@ const component = {
 
 window.addEventListener('DOMContentLoaded',  () => {
     const app = createApp(component)
-    app.mount("#login")
+    app.mount("#sign-up")
 } )

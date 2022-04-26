@@ -1,0 +1,5 @@
+body{
+    background-size: 410%;
+    z-index: 0;
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://assets.nflxext.com/ffe/siteui/vlv3/59e045df-814d-4342-bf9d-e62ba23e916a/649f9733-fa10-42d4-809f-0b908145bc21/ZA-en-20220418-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+}
