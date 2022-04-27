@@ -4,16 +4,21 @@ const component = {
 
   data() {
       return {
-          
+          userName: '',
+          password: '',
+          user:[]
       }
   },
+  computed:{
+      userData(){
+        return this.userName + "\n" + this.password
+      }
+    },
 
   methods: {
-      
-  },
+      saveData(){
 
-  computed:{
-
+      }
   },
 
   template: /* html */
@@ -22,10 +27,10 @@ const component = {
     <form class=form>
             <h2>Login!</h2>
             <br>
-            <input id="userName" type="text" placeholder="User-Name" class="user-input">
+            <input id="userName" type="text" placeholder="User-Name" class="user-input" v-model="userName">
             <br>
             <br>
-            <input id="passWord" placeholder="Password" class="user-input">
+            <input id="passWord" placeholder="Password" class="user-input" v-model="password">
             <br>
             <br>
 
