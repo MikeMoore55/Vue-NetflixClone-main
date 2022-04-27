@@ -33,7 +33,7 @@ const component = {
             <br>
             <br>
             <br>
-            <p class="form-text">Don't have an account?<a href="./sign-up-page.html" class="form-link">create one!</a></p>
+            <p class="form-text">Don't have an account?<a href="/src/pages/sign-up-page.html" class="form-link">create one!</a></p>
       </form>
     </div>
   `,
