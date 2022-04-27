@@ -19,18 +19,24 @@ const component = {
   template: /* html */
   `
     <div>
-        <form>
+        <form class=form>
             <h2>Create an Account!</h2>
-            <label for="userName">UserName:</label>
             <br>
-            <input id="userName" type="text">
+            <input id="userName" type="text" placeholder="User-Name" class="user-input">
             <br>
-            <label for="passWord">Password:</label>
             <br>
-            <input id="passWord">
+            <input id="passWord" placeholder="Password" class="user-input">
             <br>
-            <p>Don't have an account?</p>
-            <a>create one!</a>
+            <br>
+
+            <button type="button" class="form-button">Create Account</button>
+            <br>
+            <br>
+            <br>
+            <p class="form-text">Have an account?<a href="./login-page.html" class="form-link">Login!</a></p>
+            
+            <br>
+            <br>
         </form>
     </div>
   `,
