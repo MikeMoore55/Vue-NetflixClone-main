@@ -1,6 +1,11 @@
-const {createApp} = window.Vue
+
+/* 
+import { Movie } from "/class/movie-class.js";
+ */
 
 const LOGGED_IN_USER_KEY = "logged-in-user-storage-key";
+
+const {createApp} = window.Vue;
 
 
 const component = {
@@ -27,6 +32,16 @@ const component = {
     <div class="log-out-div">
       <p class="user-name">{{username}}</p>
       <button class="log-out">Log out!</button>
+    </div>
+
+    <div id="hero" class="hero-header">
+      <h1>Coming soon!</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>upcoming movies will be displayed here soon...</p>
+
     </div>
   
   

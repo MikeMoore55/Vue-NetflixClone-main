@@ -34,3 +34,7 @@ body{
     border-radius: 4px;
     background-color: #D30408;
 }
+
+.hero-header{
+    background-color: rgb(50, 50, 50);
+}
