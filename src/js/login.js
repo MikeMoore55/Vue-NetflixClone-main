@@ -1,52 +1,54 @@
-const {createApp} = window.Vue
+/*************************
+ * VARIABLES
+ *************************/
 
-const component = {
+ const form = document.querySelector("#login-form");
+ const inputUsername = document.querySelector("#user-name");
+ const inputPassword = document.querySelector("#password");
+ 
+ const LOGGED_IN_USER_KEY = "logged-in-user-storage-key";
+ let userArray = [];
+ 
+//----class----
+ 
+ class User {
+   constructor(username, password) {
+     this._username = username;
+     this._password = password;
+   }
+   get username() {
+     return this._username;
+   }
+ 
+   get password() {
+     return this._password;
+   }
+ }
+ 
+//----event listeners----
+ 
+ form.addEventListener("submit", function (event) {
+   event.preventDefault();
+   loggedInUser(inputUsername.value, inputPassword.value);
+   window.location.href = "/src/pages/home-page.html";
+ });
+ 
+//----event listeners----
 
-  data() {
-      return {
-          userName: '',
-          password: '',
-          user:[]
-      }
-  },
-  computed:{
-      userData(){
-        return this.userName + "\n" + this.password
-      }
-    },
-
-  methods: {
-      saveData(){
-
-      }
-  },
-
-  template: /* html */
-  `
-    <div>
-    <form class=form>
-            <h2>Login!</h2>
-            <br>
-            <input id="userName" type="text" placeholder="User-Name" class="user-input" v-model="userName">
-            <br>
-            <br>
-            <input id="passWord" placeholder="Password" class="user-input" v-model="password">
-            <br>
-            <br>
-
-            <button type="button" class="form-button">Create Account</button>
-            <br>
-            <br>
-            <br>
-            <p class="form-text">Don't have an account?<a href="/src/pages/sign-up-page.html" class="form-link">create one!</a></p>
-      </form>
-    </div>
-  `,
-
-
-}
-
-window.addEventListener('DOMContentLoaded',  () => {
-    const app = createApp(component)
-    app.mount("#login")
-} )
+ function loggedInUser(username, email, password) {
+   if (username !== "" && password !== "") {
+     let loggedInUser = new User(username, password);
+     userArray.push(loggedInUser);
+     addToLocalStorage(userArray);
+   }
+ }
+ 
+ /*************************
+  * LOCAL STORAGE
+  *************************/
+ 
+ function addToLocalStorage(userArray) {
+   userArray = JSON.stringify(userArray);
+   localStorage.setItem(LOGGED_IN_USER_KEY, userArray);
+   // userArray = JSON.parse(localStorage.getItem(LOGGEDIN_USER_KEY))
+ }
