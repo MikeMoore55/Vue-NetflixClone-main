@@ -1,7 +1,15 @@
 
-/* 
-import { Movie } from "/class/movie-class.js";
- */
+class Movie {
+  constructor(id, movieName, genre, comingSoon, availDate, thumbNail, preview) {
+    this.id = id;
+    this.name = movieName;
+    this.genre = genre;
+    this.comingSoon = comingSoon;
+    this.availDate = availDate;
+    this.thumbnail = thumbNail;
+    this.preview = preview;
+  }
+}
 
 const LOGGED_IN_USER_KEY = "logged-in-user-storage-key";
 
@@ -12,6 +20,12 @@ const component = {
 
   data() {
       return {
+        movieList:[
+          new Movie(
+            
+          )
+
+        ],
         userArray: [],
         username: "",
       }
