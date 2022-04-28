@@ -1,7 +1,10 @@
 body{
     background-color: black;
+}
+
+.header{
     position: fixed;
-    z-index: 0;
+    z-index: 2;
 }
 
 .netflix-logo{
@@ -35,6 +38,26 @@ body{
     background-color: #D30408;
 }
 
-.hero-header{
-    background-color: rgb(50, 50, 50);
+
+.movie-img{
+    width: 14em;
+    height: 20em;
+}
+
+.movie-name{
+    color: white;
+}
+
+.movie-info{
+    color: white;
+}
+
+.movie-info-section{
+    margin: 4% 0% 8% 0%;
+}
+
+.movie-display{
+    position: absolute;
+    top: 40%;
+    left: 10%;
 }

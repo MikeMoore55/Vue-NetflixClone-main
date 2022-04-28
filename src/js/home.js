@@ -27,7 +27,7 @@ const component = {
             "Adventure",
             "false",
             "18/09/2015",
-            href="/src/images/Everest.jpg",
+            "/src/images/Everest.jpg",
             "https://www.youtube.com/watch?v=5ZQVpPiOji0"
           ),
 
@@ -37,7 +37,7 @@ const component = {
             "Action",
             "false",
             "22/06/2001",
-            href="/src/images/fast-and-furious-1",
+            "/src/images/fast-and-furious-1.jpg",
             "https://www.youtube.com/watch?v=GoSUdZJg3pw"
           ),
 
@@ -47,7 +47,7 @@ const component = {
             "Action",
             "false",
             "06/06/2003",
-            href="/src/images/fast-and-furious-2",
+            "/src/images/fast-and-furious-2.jpg",
             "https://www.youtube.com/watch?v=ZZGkV_xWGw4",
           ),
 
@@ -57,7 +57,7 @@ const component = {
             "Action",
             "false",
             "12/03/2009",
-            href="/src/images/fast-and-furious-4",
+            "/src/images/fast-and-furious-4.jpg",
             "https://www.youtube.com/watch?v=BCg9R_MGZKg",
           ),
 
@@ -67,7 +67,7 @@ const component = {
             "Action",
             "false",
             "29/04/2011",
-            href="/src/images/fast-and-furious-5",
+            "/src/images/fast-and-furious-5.jpg",
             "https://www.youtube.com/watch?v=OqjeOYeG5_A",
           ),
 
@@ -75,12 +75,62 @@ const component = {
             "YS8INBNOTe",
             "Fast and Furious 6",
             "Action",
-            "true",
+            "false",
             "06/05/2013",
-            href="/src/images/fast-and-furious-6",
+            "/src/images/fast-and-furious-6.jpg",
             "https://www.youtube.com/watch?v=C_puVuHoR6o",
           ),
 
+          new Movie(
+            "w6_nW_NAA2",
+            "The Fast and the Furious: Tokyo Drift",
+            "Action",
+            "false",
+            "16/06/2006",
+            "/src/images/fast-and-furious-3.jpg",
+            "https://www.youtube.com/watch?v=p8HQ2JLlc4E",
+          ),
+
+          new Movie(
+            "b8if75wW6O",
+            "Furious 7",
+            "Action",
+            "false",
+            "03/04/2015",
+            "/src/images/fast-and-furious-7.jpg",
+            "https://www.youtube.com/watch?v=C_puVuHoR6o",
+          ),
+
+          new Movie(
+            "_aGB09UvNV",
+            "The Fate of the Furious",
+            "Action",
+            "false",
+            "14/04/2017",
+            "/src/images/fast-and-furious-8.jpg",
+            "https://www.youtube.com/watch?v=uisBaTkQAEs",
+          ),
+          
+          new Movie(
+            "f_A33vTJu8",
+            "Fast & Furious Presents: Hobbs & Shaw",
+            "Action",
+            "false",
+            "02/08/2019",
+            "/src/images/fast-and-furious-hobbs.jpg",
+            " https://www.youtube.com/watch?v=HZ7PAyCDwEg",
+          ),
+
+          new Movie (
+            "9h7vV2eVXG",
+            "F9",
+            "Action",
+            "false",
+            "25/06/2021",
+            "/src/images/fast-and-furious-9.jpg",
+            "https://www.youtube.com/watch?v=fEE4RO-_jug",
+          ),
+          /* finish list */
         ],
         userArray: [],
         username: "",
@@ -104,23 +154,26 @@ const component = {
 
   template: /* html */
   `
-  
-    <img class="netflix-logo" src="/src/images/netflix-logo-img.png">
-    <div class="log-out-div">
-      <p class="user-name">{{username}}</p>
-      <button class="log-out" @click="logout">Log out!</button>
+    <div class="header">
+      <img class="netflix-logo" src="/src/images/netflix-logo-img.png">
+      <div class="log-out-div">
+        <p class="user-name">{{username}}</p>
+        <button class="log-out" @click="logout">Log out!</button>
+      </div>
     </div>
 
-    <div id="movieDisplay">
-      <ul>
+    <div id="movieDisplay" class="movie-display">
+      <ul class="movie-list">
         <li v-for="(movie, index) in movieList" :key="movie.id">
-        <span>{{ movie.name }}</span>
-        <br/>
-        <span>{{ movie.genre }}</span>
-        <br/>
-        <span>{{ movie.availDate }}</span>
-        <br/>
         <img class="movie-img" v-bind:src="movie.thumbnail">
+        <br/>
+        <div class="movie-info-section">
+          <span class="movie-name">{{ movie.name }}</span>
+          <br/>
+          <span class="movie-info">{{ movie.genre }}</span>
+          <br/>
+          <span class="movie-info">{{ movie.availDate }}</span>
+          </div>
         </li>
       </ul>
     </div>
