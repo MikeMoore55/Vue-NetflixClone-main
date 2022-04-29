@@ -25,7 +25,7 @@ const component = {
             "pi8HsKXN5G",
             "Everest",
             "Adventure",
-            "false",
+            false,
             "18/09/2015",
             "/src/images/Everest.jpg",
             "https://www.youtube.com/watch?v=5ZQVpPiOji0"
@@ -35,7 +35,7 @@ const component = {
             "zhfzHGhFjK",
             "The Fast and The Furious",
             "Action",
-            "false",
+            false,
             "22/06/2001",
             "/src/images/fast-and-furious-1.jpg",
             "https://www.youtube.com/watch?v=GoSUdZJg3pw"
@@ -45,7 +45,7 @@ const component = {
             "TymNNADk_X",
             "2 Fast 2 Furious",
             "Action",
-            "false",
+            false,
             "06/06/2003",
             "/src/images/fast-and-furious-2.jpg",
             "https://www.youtube.com/watch?v=ZZGkV_xWGw4",
@@ -55,7 +55,7 @@ const component = {
             "N7xyWhg0i",
             "Fast and Furious",
             "Action",
-            "false",
+            false,
             "12/03/2009",
             "/src/images/fast-and-furious-4.jpg",
             "https://www.youtube.com/watch?v=BCg9R_MGZKg",
@@ -65,7 +65,7 @@ const component = {
             "vdPZEOGsEj",
             "Fast 5",
             "Action",
-            "false",
+            false,
             "29/04/2011",
             "/src/images/fast-and-furious-5.jpg",
             "https://www.youtube.com/watch?v=OqjeOYeG5_A",
@@ -75,7 +75,7 @@ const component = {
             "YS8INBNOTe",
             "Fast and Furious 6",
             "Action",
-            "false",
+            false,
             "06/05/2013",
             "/src/images/fast-and-furious-6.jpg",
             "https://www.youtube.com/watch?v=C_puVuHoR6o",
@@ -85,7 +85,7 @@ const component = {
             "w6_nW_NAA2",
             "The Fast and the Furious: Tokyo Drift",
             "Action",
-            "false",
+            false,
             "16/06/2006",
             "/src/images/fast-and-furious-3.jpg",
             "https://www.youtube.com/watch?v=p8HQ2JLlc4E",
@@ -95,7 +95,7 @@ const component = {
             "b8if75wW6O",
             "Furious 7",
             "Action",
-            "false",
+            false,
             "03/04/2015",
             "/src/images/fast-and-furious-7.jpg",
             "https://www.youtube.com/watch?v=C_puVuHoR6o",
@@ -105,7 +105,7 @@ const component = {
             "_aGB09UvNV",
             "The Fate of the Furious",
             "Action",
-            "false",
+            false,
             "14/04/2017",
             "/src/images/fast-and-furious-8.jpg",
             "https://www.youtube.com/watch?v=uisBaTkQAEs",
@@ -115,7 +115,7 @@ const component = {
             "f_A33vTJu8",
             "Fast & Furious Presents: Hobbs & Shaw",
             "Action",
-            "false",
+            false,
             "02/08/2019",
             "/src/images/fast-and-furious-hobbs.jpg",
             " https://www.youtube.com/watch?v=HZ7PAyCDwEg",
@@ -125,7 +125,7 @@ const component = {
             "9h7vV2eVXG",
             "F9",
             "Action",
-            "false",
+            false,
             "25/06/2021",
             "/src/images/fast-and-furious-9.jpg",
             "https://www.youtube.com/watch?v=fEE4RO-_jug",
@@ -135,7 +135,7 @@ const component = {
             "Wfx-U5Gst3",
             "Black Panther",
             "Action",
-            "false",
+            false,
             "16/02/2018",
             "/src/images/black-panther.jpg",
             "https://www.youtube.com/watch?v=xjDjIWPwcPU",
@@ -145,7 +145,7 @@ const component = {
             "kMK4m9zQ9B",
             "Black Adam",
             "Action",
-            "true",
+            true,
             "21/10/2022",
             "/src/images/black-adam.jpg",
             "https://www.youtube.com/watch?v=N73oTiIIJe0",
@@ -155,7 +155,7 @@ const component = {
             "9BFEgBKzKF",
             "Avatar 2",
             "Action/Adventure",
-            "true",
+            true,
             "16/12/2022",
             "/src/images/avatar-2.jpg",
             "https://www.youtube.com/watch?v=MknKGdvuYKo",
@@ -165,7 +165,7 @@ const component = {
             "fVmpautPP3",
             "Top Gun: Maverick",
             "Action",
-            "true",
+            true,
             "27/05/2022",
             "/src/images/top-gun-2.jpg",
             "https://www.youtube.com/watch?v=qSqVVswa420",
@@ -175,7 +175,7 @@ const component = {
             "m6WxCSplRZ",
             "Halloween Ends",
             "Horror",
-            "true",
+            true,
             "14/10/2022",
             "/src/images/halloween-ends.jpg",
             "https://www.youtube.com/watch?v=4c8OLrmejkY&vl=en",
@@ -185,7 +185,7 @@ const component = {
             "BeeOpckwFw",
             "Free Guy",
             "comedy",
-            "false",
+            false,
             "13/08/2021",
             "/src/images/free-guy.jpg",
             "https://www.youtube.com/watch?v=X2m-08cOAbc",
@@ -195,7 +195,7 @@ const component = {
             "L9N64HhJXz",
             "The Wolf of Wall Street",
             "Drama",
-            "false",
+            false,
             "25/12/2013",
             "/src/images/wolf-of-wallstreet.jpg",
             "https://www.youtube.com/watch?v=iszwuX1AK6A",
@@ -205,7 +205,7 @@ const component = {
             "jZzvMU7hP7",
             "Grown Ups",
             "comedy",
-            "false",
+            false,
             "25/06/2010",
             "/src/images/grown-ups.jpg",
             "https://www.youtube.com/watch?v=e01NVCveGkg",
@@ -215,14 +215,16 @@ const component = {
             "ba-j126W2c",
             "The Transporter",
             "Action",
-            "false",
+            false,
             "02/10/2002",
             "/src/images/transporter.jpg",
             "https://www.youtube.com/watch?v=0poXFSvX0_4",
           ),
         ],
+        visibleSlide: 0,
         userArray: [],
         username: "",
+        comingSoon:[],
       }
   },
 
@@ -231,19 +233,30 @@ const component = {
       localStorage.removeItem(LOGGED_IN_USER_KEY);
       window.location.href = "../../index.html";
     },
+
   },
 
   computed:{
-    comingSoonList() {
+    /* comingSoonList() {
       return this.movieList.filter((movie) => {
-        return movie.comingSoon===true;
+        return movie.comingSoon === true;
       });
+    }, */
+
+    comingSoonList(){
+      return this.movieList.filter((movie) => {
+        return movie.comingSoon === true;})
     },
+
+    availableList(){
+      return this.movieList.filter((movie) => {
+        return movie.comingSoon === false;})
+    }
   },
 
   template: /* html */
   `
-    <div class="header">
+    <div class="nav">
       <img class="netflix-logo" src="/src/images/netflix-logo-img.png">
       <div class="log-out-div">
         <p class="user-name">{{username}}</p>
@@ -251,9 +264,28 @@ const component = {
       </div>
     </div>
 
+    <header class="header">
+      <div class="carousel">
+       
+        <ul class="coming-list">
+          <li class="coming-soon-movie" v-for="(movie, index) in comingSoonList" :key="movie.id">
+            <span class="coming-soon-movie-name">{{ movie.name }}</span>
+            <br/>
+            <img class="coming-soon-movie-img" v-bind:src="movie.thumbnail">
+            <br/>
+            <span class="coming-soon-movie-info">{{ movie.genre }}</span>
+            <br/>
+            <span class="coming-soon-movie-info">{{ movie.availDate }}</span>
+          </li>
+        </ul>
+        <button> next </button>
+        <button> prev </button>
+      </div>
+    </header>
+
     <div id="movieDisplay" class="movie-display">
       <ul class="movie-list">
-        <li class="movie" v-for="(movie, index) in movieList" :key="movie.id">
+        <li class="movie" v-for="(movie, index) in availableList" :key="movie.id">
         <span class="movie-name">{{ movie.name }}</span>
         <br/>
         <img class="movie-img" v-bind:src="movie.thumbnail">
