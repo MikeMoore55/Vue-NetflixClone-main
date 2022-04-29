@@ -130,7 +130,96 @@ const component = {
             "/src/images/fast-and-furious-9.jpg",
             "https://www.youtube.com/watch?v=fEE4RO-_jug",
           ),
-          /* finish list */
+
+          new Movie (
+            "Wfx-U5Gst3",
+            "Black Panther",
+            "Action",
+            "false",
+            "16/02/2018",
+            "/src/images/black-panther.jpg",
+            "https://www.youtube.com/watch?v=xjDjIWPwcPU",
+          ),
+
+          new Movie (
+            "kMK4m9zQ9B",
+            "Black Adam",
+            "Action",
+            "true",
+            "21/10/2022",
+            "/src/images/black-adam.jpg",
+            "https://www.youtube.com/watch?v=N73oTiIIJe0",
+          ),
+
+          new Movie (
+            "9BFEgBKzKF",
+            "Avatar 2",
+            "Action/Adventure",
+            "true",
+            "16/12/2022",
+            "/src/images/avatar-2.jpg",
+            "https://www.youtube.com/watch?v=MknKGdvuYKo",
+          ),
+
+          new Movie (
+            "fVmpautPP3",
+            "Top Gun: Maverick",
+            "Action",
+            "true",
+            "27/05/2022",
+            "/src/images/top-gun-2.jpg",
+            "https://www.youtube.com/watch?v=qSqVVswa420",
+          ),
+
+          new Movie (
+            "m6WxCSplRZ",
+            "Halloween Ends",
+            "Horror",
+            "true",
+            "14/10/2022",
+            "/src/images/halloween-ends.jpg",
+            "https://www.youtube.com/watch?v=4c8OLrmejkY&vl=en",
+          ),
+
+          new Movie (
+            "BeeOpckwFw",
+            "Free Guy",
+            "comedy",
+            "false",
+            "13/08/2021",
+            "/src/images/free-guy.jpg",
+            "https://www.youtube.com/watch?v=X2m-08cOAbc",
+          ),
+
+          new Movie (
+            "L9N64HhJXz",
+            "The Wolf of Wall Street",
+            "Drama",
+            "false",
+            "25/12/2013",
+            "/src/images/wolf-of-wallstreet.jpg",
+            "https://www.youtube.com/watch?v=iszwuX1AK6A",
+          ),
+
+          new Movie (
+            "jZzvMU7hP7",
+            "Grown Ups",
+            "comedy",
+            "false",
+            "25/06/2010",
+            "/src/images/grown-ups.jpg",
+            "https://www.youtube.com/watch?v=e01NVCveGkg",
+          ),
+
+          new Movie (
+            "ba-j126W2c",
+            "The Transporter",
+            "Action",
+            "false",
+            "02/10/2002",
+            "/src/images/transporter.jpg",
+            "https://www.youtube.com/watch?v=0poXFSvX0_4",
+          ),
         ],
         userArray: [],
         username: "",
@@ -164,16 +253,14 @@ const component = {
 
     <div id="movieDisplay" class="movie-display">
       <ul class="movie-list">
-        <li v-for="(movie, index) in movieList" :key="movie.id">
+        <li class="movie" v-for="(movie, index) in movieList" :key="movie.id">
+        <span class="movie-name">{{ movie.name }}</span>
+        <br/>
         <img class="movie-img" v-bind:src="movie.thumbnail">
         <br/>
-        <div class="movie-info-section">
-          <span class="movie-name">{{ movie.name }}</span>
-          <br/>
-          <span class="movie-info">{{ movie.genre }}</span>
-          <br/>
-          <span class="movie-info">{{ movie.availDate }}</span>
-          </div>
+        <span class="movie-info">{{ movie.genre }}</span>
+        <br/>
+        <span class="movie-info">{{ movie.availDate }}</span>
         </li>
       </ul>
     </div>

@@ -214,7 +214,7 @@ id = ba-j126W2c
 name = The Transporter
 genre = Action
 comingSoon = false
-availDate = 02/10/2022
+availDate = 02/10/2002
 thumbnail = /src/images/transporter
 preview = https://www.youtube.com/watch?v=0poXFSvX0_4
 
