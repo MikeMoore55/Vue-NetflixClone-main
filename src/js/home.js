@@ -237,12 +237,6 @@ const component = {
   },
 
   computed:{
-    /* comingSoonList() {
-      return this.movieList.filter((movie) => {
-        return movie.comingSoon === true;
-      });
-    }, */
-
     comingSoonList(){
       return this.movieList.filter((movie) => {
         return movie.comingSoon === true;})
@@ -260,12 +254,13 @@ const component = {
       <img class="netflix-logo" src="/src/images/netflix-logo-img.png">
       <div class="log-out-div">
         <p class="user-name">{{username}}</p>
+        <button class="log-out">My list</button>
         <button class="log-out" @click="logout">Log out!</button>
       </div>
     </div>
 
     <header class="header">
-      <div class="carousel">
+       <div class="carousel">
        
         <ul class="coming-list">
           <li class="coming-soon-movie" v-for="(movie, index) in comingSoonList" :key="movie.id">
