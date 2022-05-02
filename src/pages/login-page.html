@@ -1,26 +1,57 @@
+<!-- login page -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-in</title>
-    <link rel="icon" href="/src/images/netflix-N-logo-img.png">
-    <link rel="stylesheet" href="/src/css/log-in&sign-up-page.css">
-    <script src="https://unpkg.com/vue@3" defer></script>
-    <script src="https://unpkg.com/vue-router@4" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="/src/css/log-in&sign-up-page.css" />
+    <!-- js script -->
     <script src="/src/js/login.js" defer></script>
-</head>
-<body>
-    <img class="netflix-logo" src="/src/images/netflix-logo-img.png">
-    <div>
-        <form id="login-form" class=form>
-            <h2>Login!</h2>
-            <input id="user-name" type="text" placeholder="User-Name" class="user-input">
-            <input id="password" placeholder="Password" class="user-input">
-            <button class="form-button" type="submit">login</button>
-            <p class="form-text">Don't have an account?<a href="/src/pages/sign-up-page.html" class="form-link">create one!</a></p>
+    <title>Log-in</title>
+    <link rel="icon" href="/src/images/netflix-N-logo-img.png" />
+  </head>
+  <body>
+
+    <img class="netflix-logo" src="/src/images/netflix-logo-img.png" />
+    
+    <div id="form-container" class="form-container">
+
+    <!-- login form -->
+      <form id="login-form" class="form">
+
+        <h2>Login!</h2>
+
+        <input
+          id="user-name"
+          type="text"
+          placeholder="User-Name"
+          class="user-input"
+          required
+        />
+
+        <input
+          id="password"
+          placeholder="Password"
+          class="user-input"
+          required
+        />
+
+        <button id="form-btn" class="form-button" type="submit">
+            login
+        </button>
+
+        <!-- if user does-not have an account, the can create one with this link -->
+
+        <p id="form-text" class="form-text">
+          Don't have an account?
+          <a href="/src/pages/sign-up-page.html" id="form-link" class="form-link">
+              create one!
+            </a>
+        </p>
+
       </form>
     </div>
-</body>
+  </body>
 </html>

@@ -56,12 +56,12 @@ body{
     background-color: #890306;
 }
 
-.my-list{
+.home{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     position: fixed;
-    right: 10%;
+    right: 15%;
     top: 3%;
     padding: 2% 2% 2% 2%;
     border: none;
@@ -69,51 +69,7 @@ body{
     background-color: #D30408;
 }
 
-.my-list:active{
+.home:active{
     transform: scale(0.9);
     background-color: #890306;
-}
-
-.header{
-    position: absolute;
-    top: 20%;
-}
-
-.coming-soon-movie-img{
-    width: 10em;
-    height: 15em;
-}
-
-.coming-list{
-    display: flex;
-}
-
-.movie-list{
-    display: flex;
-}
-
-.movie-display{
-    position: absolute;
-    top: 70%;
-}
-
-.movie{
-    margin: 5% 0% 10% 0%;
-}
-
-.movie-img{
-    width: 10em;
-    height: 15em;
-}
-
-.movie-name{
-    color: white;
-    margin: 0% 0% 5% 0%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
-}
-
-.movie-info{
-    color: rgb(127, 127, 127);
-    font-family: Arial, Helvetica, sans-serif;
 }

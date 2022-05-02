@@ -234,6 +234,10 @@ const component = {
       window.location.href = "../../index.html";
     },
 
+    myListBtn(){
+      window.location.href = "/src/pages/watch-list-page.html";
+    }
+
   },
 
   computed:{
@@ -254,7 +258,7 @@ const component = {
       <img class="netflix-logo" src="/src/images/netflix-logo-img.png">
       <div class="log-out-div">
         <p class="user-name">{{username}}</p>
-        <button class="log-out">My list</button>
+        <button class="my-list" @click="myListBtn">My list</button>
         <button class="log-out" @click="logout">Log out!</button>
       </div>
     </div>

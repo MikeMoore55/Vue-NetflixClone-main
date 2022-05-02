@@ -1,184 +1,192 @@
+/* login and sign up page uses the same styling */
 
-body{
-    background-size: 410%;
-    z-index: 0;
-    background: linear-gradient( to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://assets.nflxext.com/ffe/siteui/vlv3/59e045df-814d-4342-bf9d-e62ba23e916a/649f9733-fa10-42d4-809f-0b908145bc21/ZA-en-20220418-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+* {
+  box-sizing: border-box;
 }
 
-.netflix-logo{
-    position: relative;
-    width: 95%;
-    left: 0%;
-    top: 0%;
-    margin: 0%;
-    padding: 0%;
+body {
+  background-size: 410%;
+  z-index: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://assets.nflxext.com/ffe/siteui/vlv3/59e045df-814d-4342-bf9d-e62ba23e916a/649f9733-fa10-42d4-809f-0b908145bc21/ZA-en-20220418-popsignuptwoweeks-perspective_alpha_website_large.jpg);
 }
 
-.form{
-    position: fixed;
-    z-index: 1;
-    top:30%;
-    left: 6%;
-    width: 80%;    
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5% 2% 3% 2%;
+.netflix-logo {
+  position: relative;
+  width: 95%;
+  left: 0%;
+  top: 0%;
+  margin: 0%;
+  padding: 0%;
 }
 
-h2{
-    color: #fffbfb;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    text-transform: capitalize;
-    font-weight: 500;
+.form {
+  position: fixed;
+  z-index: 1;
+  top: 30%;
+  left: 6%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5% 2% 3% 2%;
 }
 
-.user-input{
-    background-color: rgb(50, 50, 50);
-    margin: 2% 3% 3% 3%;
-    width: 90%;
-    height: 1.7em;
-    border: none;
-    border-radius: 7px;
-    font-size: 1.3em;
-    padding: 2% 3% 2% 3%;
+h2 {
+  color: #fffbfb;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
-.form-button{
-    background-color: #D30408;
-    width: 70%;
-    border: none;
-    font-size: 1.2em;
-    color: white;
-    padding: 3% 5% 3% 5%;
-    margin: 2% 15% 2% 15%;
-    border-radius: 5px;
-    box-shadow: #490001 4px 4px 0px 0px;
-    text-decoration: none;
+/* user input for userName and Password input fields */
+
+.user-input {
+  background-color: rgb(50, 50, 50);
+  margin: 2% 3% 3% 3%;
+  width: 90%;
+  height: 1.7em;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.3em;
+  padding: 2% 3% 2% 3%;
 }
 
-.form-text{
-    color: #fefefe;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    margin: 2% 3% 1% 3%;
-    text-align: center;
+.form-button {
+  background-color: #d30408;
+  width: 70%;
+  border: none;
+  font-size: 1.2em;
+  color: white;
+  padding: 3% 5% 3% 5%;
+  margin: 2% 15% 2% 15%;
+  border-radius: 5px;
+  box-shadow: #490001 4px 4px 0px 0px;
+  text-decoration: none;
 }
 
-.form-link{
-    color: #D30408;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    margin: 5% 3% 1% 3%;
+/* button affect when clicked */
+
+.form-button:active {
+  transform: scale(0.9);
+  background-color: #890306;
 }
 
-.form-button:active{
-    transform: scale(0.9);
-    background-color: #890306;
+.form-text {
+  color: #fefefe;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 2% 3% 1% 3%;
+  text-align: center;
 }
 
+.form-link {
+  color: #d30408;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 5% 3% 1% 3%;
+}
 
 /* ---- media queries ---- */
 
-@media(min-width: 500px){
-
-    body{
-        background-size: 300%;
-    }
-
-    .netflix-logo{
-        width: 80%;
-        left: 10%;
-        top: 0%;
-    }
+@media (min-width: 500px) {
     
-    .form{
-        top:30%;
-        left: 12%;
-        width: 70%;    
-        padding: 5% 2% 3% 2%;
-    }
-    
-    h2{
-        font-size: 2.5em;
-        font-weight: 400;
-    }
-    
-    .user-input{
-        margin: 1% 3% 1% 3%;
-        width: 90%;
-        height: 2em;
-        border-radius: 7px;
-        font-size: 2em;
-        padding: 1% 2% 1% 2%;
-    }
+  body {
+    background-size: 300%;
+  }
 
-     .form-button{
-        width: 70%;
-        font-size: 2em;
-        padding: 2% 3% 3% 5%;
-        margin: 5% 15% 2% 15%;
-        border-radius: 5px;
-    }
+  .netflix-logo {
+    width: 80%;
+    left: 10%;
+    top: 0%;
+  }
 
-    .form-text{
-        font-size: 1.3em;
-    }
-    
-    .form-link{
-        font-size: 1.3em;
-    }
+  .form {
+    top: 30%;
+    left: 12%;
+    width: 70%;
+    padding: 5% 2% 3% 2%;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+  }
+
+  .user-input {
+    margin: 1% 3% 1% 3%;
+    width: 90%;
+    height: 2em;
+    border-radius: 7px;
+    font-size: 2em;
+    padding: 1% 2% 1% 2%;
+  }
+
+  .form-button {
+    width: 70%;
+    font-size: 2em;
+    padding: 2% 3% 3% 5%;
+    margin: 5% 15% 2% 15%;
+    border-radius: 5px;
+  }
+
+  .form-text {
+    font-size: 1.3em;
+  }
+
+  .form-link {
+    font-size: 1.3em;
+  }
 }
 
-@media(min-width: 1000px){
+@media (min-width: 1000px) {
+  body {
+    background-size: 300%;
+  }
 
-    body{
-        background-size: 300%;
-    }
+  .netflix-logo {
+    width: 30%;
+    left: 35%;
+    top: 0%;
+  }
 
-    .netflix-logo{
-        width: 30%;
-        left: 35%;
-        top: 0%;
-    }
-    
-    .form{
-        top:30%;
-        left: 24%;
-        width: 50%;    
-        padding: 1% 1% 1% 1%;
-    }
-    
-    h2{
-        font-size: 2em;
-        font-weight: 400;
-    }
-    
-    .user-input{
-        margin: 0% 3% 2% 3%;
-        width: 90%;
-        height: 1.5em;
-        border-radius: 7px;
-        font-size: 1.3em;
-        padding: 2% 3% 2% 3%;
-    }
+  .form {
+    top: 30%;
+    left: 24%;
+    width: 50%;
+    padding: 1% 1% 1% 1%;
+  }
 
-    .form-button{
-        width: 50%;
-        font-size: 1.5em;
-        padding: 1% 3% 1% 3%;
-        margin: 2% 25% 2% 25%;
-        border-radius: 5px;
-    }
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+  }
 
-    .form-text{
-        font-size: 1em;
-        margin: 1% 0% 1% 3%;
-        font-weight: 50%;
-        text-align: center;
-    }
-    
-    .form-link{
-        font-size: 1em;
-    }
+  .user-input {
+    margin: 0% 3% 2% 3%;
+    width: 90%;
+    height: 1.5em;
+    border-radius: 7px;
+    font-size: 1.3em;
+    padding: 2% 3% 2% 3%;
+  }
+
+  .form-button {
+    width: 50%;
+    font-size: 1.5em;
+    padding: 1% 3% 1% 3%;
+    margin: 2% 25% 2% 25%;
+    border-radius: 5px;
+  }
+
+  .form-text {
+    font-size: 1em;
+    margin: 1% 0% 1% 3%;
+    font-weight: 50%;
+    text-align: center;
+  }
+
+  .form-link {
+    font-size: 1em;
+  }
 }
