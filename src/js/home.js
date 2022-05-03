@@ -264,22 +264,20 @@ const component = {
     </div>
 
     <header class="header">
-       <div class="carousel">
+    <div class="carousel">
        
-        <ul class="coming-list">
-          <li class="coming-soon-movie" v-for="(movie, index) in comingSoonList" :key="movie.id">
-            <span class="coming-soon-movie-name">{{ movie.name }}</span>
-            <br/>
-            <img class="coming-soon-movie-img" v-bind:src="movie.thumbnail">
-            <br/>
-            <span class="coming-soon-movie-info">{{ movie.genre }}</span>
-            <br/>
-            <span class="coming-soon-movie-info">{{ movie.availDate }}</span>
-          </li>
-        </ul>
-        <button> next </button>
-        <button> prev </button>
-      </div>
+    <ul class="movie-list">
+      <li class="movie" v-for="(movie, index) in comingSoonList" :key="movie.id">
+        <span class="movie-name">{{ movie.name }}</span>
+        <br/>
+        <img class="movie-img" v-bind:src="movie.thumbnail">
+        <br/>
+        <span class="movie-info">{{ movie.genre }}</span>
+        <br/>
+        <span class="movie-info">{{ movie.availDate }}</span>
+      </li>
+    </ul>
+  </div> 
     </header>
 
     <div id="movieDisplay" class="movie-display">
@@ -309,3 +307,18 @@ window.addEventListener('DOMContentLoaded',  () => {
     const app = createApp(component)
     app.mount("#home")
 } )
+
+/* <div class="carousel">
+       
+        <ul class="coming-list">
+          <li class="coming-soon-movie" v-for="(movie, index) in comingSoonList" :key="movie.id">
+            <span class="coming-soon-movie-name">{{ movie.name }}</span>
+            <br/>
+            <img class="coming-soon-movie-img" v-bind:src="movie.thumbnail">
+            <br/>
+            <span class="coming-soon-movie-info">{{ movie.genre }}</span>
+            <br/>
+            <span class="coming-soon-movie-info">{{ movie.availDate }}</span>
+          </li>
+        </ul>
+      </div> */
