@@ -1,117 +1,159 @@
-*{box-sizing: border-box;}
-
-body{
-    background-color: black;
+* {
+  box-sizing: border-box;
 }
 
-.nav{
-    position: fixed;
-    z-index: 1;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 10%;
-    background-color: rgba(0,0,0,0.8);
+body {
+  background-color: black;
 }
 
-.nav-tog{
-    position: fixed;
-    z-index: 2;
-    top: 3%;
-    right: 3%;
-    color: #D30408;
+.nav {
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.nav-icon{
-    color: #D30408;
+.nav-list {
+  display: flex;
 }
 
-.nav-menu{
-    position: fixed;
-    top: 10%;
-    left: 0%;
-    right: 0%;
-    background-color: rgba(0,0,0,0.8); 
-    padding: 3% 5% 4% 5%;
-    
+.nav-tog {
+  position: fixed;
+  z-index: 2;
+  top: 3%;
+  right: 3%;
+  color: #d30408;
 }
 
-.netflix-logo{
-    position: fixed;
-    width: 30%;
-    left: 0%;
-    top: 0%;
-    margin: 0%;
-    padding: 0%;
+.nav-icon {
+  color: #d30408;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 10%;
+  left: 0%;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 3% 5% 4% 5%;
+}
+
+.netflix-logo {
+  position: fixed;
+  width: 30%;
+  left: 0%;
+  top: 0%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.user-name {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
 }
 
 
-.user-name{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-   
+.log-out {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 2% 2% 2% 2%;
+  margin: 2% 0% 2% 0%;
+  border: none;
+  border-radius: 4px;
+  background-color: #d30408;
 }
 
-.log-out-div{
-    
+.log-out:active {
+  transform: scale(0.9);
+  background-color: #890306;
 }
 
-.log-out{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    padding: 2% 2% 2% 2%;
-    margin: 2% 0% 2% 0%;
-    border: none;
-    border-radius: 4px;
-    background-color: #D30408;
+.my-list {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 2% 2% 2% 2%;
+  margin: 2% 0% 2% 0%;
+  border: none;
+  border-radius: 4px;
+  background-color: #d30408;
 }
 
-.log-out:active{
-    transform: scale(0.9);
-    background-color: #890306;
+.my-list:active {
+  transform: scale(0.9);
+  background-color: #890306;
 }
 
-.my-list{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    padding: 2% 2% 2% 2%;
-    margin: 2% 0% 2% 0%;
-    border: none;
-    border-radius: 4px;
-    background-color: #D30408;
+.comingSoon-movie {
+  position: relative;
+  top: 20%;
 }
 
-.my-list:active{
-    transform: scale(0.9);
-    background-color: #890306;
+h2 {
+  font-size: 2em;
+  color: white;
+  margin: 2% 0% 5% 0%;
+  text-decoration: underline #d30408;
+  text-transform: capitalize;
+  text-align: center;
 }
 
-.comingSoon-movie{
-    position: relative;
-    top: 20%;
+h3 {
+  text-align: center;
+  font-size: 1.6em;
+  color: white;
+  font-weight: 700;
 }
 
-h2{
-    font-size: 3em;
-    color: white;
-    margin: 2% 0% 5% 0%;
+.movie-info {
+  color: gray;
+  font-size: 1.2em;
+  text-align: center;
 }
 
-h5{
-    font-size: 2em;
-    color: white;
-    font-weight: 700;
+.available-movie {
+  position: relative;
+  top: 60%;
 }
 
-.available-movie{
-    position: relative;
-    top: 60%;
+.carousel-inner img {
+  width: 50%;
+  margin: auto;
 }
 
-.carousel-inner img {        
-    width: 100%;
-    margin: auto;
+footer {
+  color: grey;
+  font-size: 13px;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+footer .footer-grid {
+  border-top: solid 2px #890306;
+  padding: 4% 0% 4% 0%;
+  margin: 5% 5% 0% 5%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+footer .footer-grid-wrapper {
+  list-style-type: none;
+  color: white;
+}
+
+footer .footer-grid-wrapper:hover {
+  background-color: #d30408;
+}
+
+.author {
+  text-align: center;
+  margin: 0% 0% 5% 0%;
 }

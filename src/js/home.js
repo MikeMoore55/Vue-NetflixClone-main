@@ -298,23 +298,18 @@ const component = {
       <h2>coming soon</h2>
 
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-
-          <template v-for="(movie, index) in comingSoonList">
-            <button type="button" data-bs-target="#carouselExampleCaptions" :data-bs-slide-to="index" :class="{ active: index === 0 }" aria-current="index === 0" :aria-label="movie.name"></button>
-          </template>
-
-          </div>
+          
 
           <div class="carousel-inner">
               <template v-for="(movie, index) in comingSoonList">
-                  <div @mouseover="hoverName" :class="{ 'carousel-item': true, active: index === 0 }" >
-                      <img :src="movie.thumbnail" class="d-block w-50 h-50 movie-img" :alt="movie.name">
+                  <div :class="{ 'carousel-item': true, active: index === 0 }" >
+                      <img :src="movie.thumbnail" class="d-block w-10 h-10" :alt="movie.name">
 
-                      <div class="carousel-caption d-md-none">
-                          <h5>{{ movie.name }}</h5>
-                      </div>
+                      <h3>{{movie.name}}</h3>
+                      <p class="movie-info">{{movie.genre}}</p>
+                      <p class="movie-info">{{movie.availDate}}</p>  
                   </div>
+                  
               </template>
           </div>
           
@@ -340,23 +335,15 @@ const component = {
       <h2>movies</h2>
 
       <div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-
-        <template v-for="(movie, index) in availableList">
-          <button type="button" data-bs-target="#carouselExampleCaptions1" :data-bs-slide-to="index" :class="{ active: index === 0 }" aria-current="index === 0" :aria-label="movie.name"></button>
-        </template>
-
-        </div>
+        
 
         <div class="carousel-inner">
             <template v-for="(movie, index) in availableList">
                 <div :class="{ 'carousel-item': true, active: index === 0 }" >
-                   <div class="carousel-caption d-md-none">
-                        <h5>{{ movie.name }}</h5>
-                        <p>{{movie.genre}}</p>
-                        <p>{{movie.availDate}}</p>
-                    </div> 
                     <img :src="movie.thumbnail" class="d-block  w-50 h-50 movie-img" :alt="movie.name">
+                    <h3>{{ movie.name }}</h3>
+                    <p class="movie-info">{{movie.genre}}</p>
+                    <p class="movie-info">{{movie.availDate}}</p>
                 </div>
             </template>
         </div>
@@ -373,6 +360,24 @@ const component = {
       </div>
 
     </section>
+
+    <footer>
+        <div class="footer-grid">
+
+          <p class="footer-grid-wrapper">Audio & Subtitles</p>
+          <p class="footer-grid-wrapper">Audio Desc</p>
+          <p class="footer-grid-wrapper">Help</p>
+          <p class="footer-grid-wrapper">Gift Cards</p>
+
+          <p class="footer-grid-wrapper">Terms of Use</p>
+          <p class="footer-grid-wrapper">Privacy</p>
+          <p class="footer-grid-wrapper">Legal Notices</p>
+          <p class="footer-grid-wrapper">Cookies</p>
+        
+        </div>
+        <p class="author">© 2022-2022 Michael Moore</p>
+
+    </footer>
   
   
   `,
