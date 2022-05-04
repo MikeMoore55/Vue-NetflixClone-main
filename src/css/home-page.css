@@ -6,14 +6,16 @@ body {
   background-color: black;
 }
 
-.nav {
-  position: fixed;
-  z-index: 1;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 10%;
- 
+.comingSoon-med{
+  display: none;
+}
+
+.available-list-med{
+  display: none;
+}
+
+.nav-med{
+  display: none;
 }
 
 .navbar-override{
@@ -124,6 +126,11 @@ h3 {
   font-weight: 700;
 }
 
+.movie-item{
+  text-align: center;
+  align-content: center;
+}
+
 .movie-info {
   color: gray;
   font-size: 1.2em;
@@ -131,21 +138,23 @@ h3 {
 }
 
 .play-icon{
-  width: 10%;
+  width: 100%;
 }
 
 .play-btn{
   border: none;
   background-color: transparent;
+  width: 4em;
 }
 
 .add-btn{
   border: none;
   background-color: transparent;
+  width: 5em;
 }
 
 .add-icon{
-  width: 1em;
+  width: 100%;
 }
 
 .available-movie {
@@ -171,7 +180,6 @@ footer .footer-grid {
   border-top: solid 2px #890306;
   padding: 4% 0% 4% 0%;
   margin: 5% 5% 0% 5%;
-  list-style: none;
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -180,6 +188,7 @@ footer .footer-grid-wrapper {
   list-style-type: none;
   color: white;
   font-size: 1.3em;
+  text-align: center;
 }
 
 footer .footer-grid-wrapper:hover {
@@ -191,4 +200,151 @@ footer .footer-grid-wrapper:hover {
   margin: 0% 0% 5% 0%;
   color: grey;
   font-size: 1em;
+}
+
+
+@media(min-width: 650px){
+  .comingSoon-small{
+    display: none;
+  }
+
+  .comingSoon-med{
+    display: block;
+  }
+
+  .available-small{
+    display: none;
+  }
+
+  .available-med{
+    display: block;
+  }
+
+  .nav-small{
+    display: none;
+  }
+
+  .nav-med{
+    display: block;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    z-index: 2;
+  }
+
+  .nav-list{
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    left: 40%;
+    width: 57%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
+  .nav-list-item{
+    margin: 0% 1% 0% 1%;
+  }
+
+  .netflix-logo{
+    width: 20%;
+  }
+
+  .comingSoon-list-med{
+    position: relative;
+    top: 15%;
+    width: 95%;
+    left: 1%;
+    right: 1%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
+  .comingSoon-movie-item-med{
+    margin: 1% 1% 1% 1%;
+    width: 100%;
+  }
+
+  .movie-img{
+    width: 12em;
+    align-items: center;
+  }
+
+  .movie-name{
+    font-size: 2em;
+    color: white;
+  }
+
+  .movie-info{
+    font-size: 1.5em;
+    color: grey;
+    text-align: center;
+    align-items: center;
+  }
+
+  .available-list-med{
+    position: relative;
+    top: 15%;
+    width: 95%;
+    left: 2.5%;
+    right: 2.5%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+}
+
+@media(min-width: 1000px){
+
+  .nav-med{
+    height: 8%;
+  }
+
+  .netflix-logo{
+    max-width: 15%;
+  }
+
+  .nav-list{
+    top: 1.5%;
+  }
+
+  .comingSoon-list-med{
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .available-list-med{
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .movie-img{
+    width: 10em;
+  }
+
+  .movie-name{
+    font-size: 1.5em;
+  }
+
+  .movie-info{
+    font-size: 1em;
+  }
 }
