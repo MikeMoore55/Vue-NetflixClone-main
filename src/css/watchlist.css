@@ -1,75 +1,157 @@
-*{box-sizing: border-box;}
-
-body{
-    background-color: black;
+* {
+  box-sizing: border-box;
 }
 
-.nav{
-    position: fixed;
-    z-index: 2;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 10%;
-    background-color: rgba(0,0,0,0.8);
+body {
+  background-color: black;
 }
 
-.netflix-logo{
-    position: fixed;
-    width: 20%;
-    left: 0%;
-    top: 0%;
-    margin: 0%;
-    padding: 0%;
+.nav {
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 10%;
 }
 
-.user-name{
+.navbar-override {
+  background-color: rgba(12, 12, 12, 0.8);
+  border-radius: none;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 10%;
+}
+
+.netflix-logo {
+  position: fixed;
+  width: 37%;
+  left: 0%;
+  top: 0%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.nav-list-div-override {
+  position: fixed;
+  top: 10%;
+  left: 0%;
+  right: 0%;
+  background-color: rgba(12, 12, 12, 0.8);
+}
+.nav-list-override {
+  position: relative;
+  top: 30%;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.nav-icon {
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  width: 2em;
+}
+
+.nav-item-override {
+  color: white;
+  text-align: right;
+}
+
+.nav-link-override {
+  color: white;
+}
+
+.user-name {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  margin: 2% 2% 2% 2%;
+}
+
+.home {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 2%;
+  border: none;
+  background-color: transparent;
+}
+
+.my-list-btn:active {
+  text-decoration: underline;
+}
+
+.log-out {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 2%;
+  border: none;
+  background-color: transparent;
+}
+
+.log-out:active {
+  text-decoration: underline;
+}
+
+.main {
+  position: absolute;
+  top: 15%;
+}
+
+h1{
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    position: fixed;
-    right: 25%;
-    top: 0%;
+    text-decoration: underline;
+    font-size: 2.5em;
 }
 
-.log-out-div{
-    position: relative;
-    width: 80%;
-    left: 20%;
+.movie-list {
+  list-style: none;
 }
 
-.log-out{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    position: fixed;
-    right: 2%;
-    top: 3%;
-    padding: 2% 2% 2% 2%;
+.movie-item {
+  position: relative;
+}
+
+.movie-name {
+  font-size: 2em;
+  color: white;
+}
+
+.movie-img {
+  width: 60%;
+}
+
+.movie-info {
+  font-size: 1.5em;
+  color: white;
+}
+
+.buttons{
+    display: flex;
+}
+
+.play-icon{
+    width: 2em;
+}
+
+.play-btn{
     border: none;
-    border-radius: 4px;
-    background-color: #D30408;
+    background-color: transparent;
 }
 
-.log-out:active{
-    transform: scale(0.9);
-    background-color: #890306;
+.remove-icon{
+    width: 2em;
 }
 
-.home{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    position: fixed;
-    right: 15%;
-    top: 3%;
-    padding: 2% 2% 2% 2%;
+.remove-btn{
     border: none;
-    border-radius: 4px;
-    background-color: #D30408;
-}
-
-.home:active{
-    transform: scale(0.9);
-    background-color: #890306;
+    background-color: transparent;
 }

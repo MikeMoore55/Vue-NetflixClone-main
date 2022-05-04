@@ -32,8 +32,8 @@ form.addEventListener("submit", function (event) {
   window.location.href = "/src/pages/home-page.html";
 });
 
-
-function loggedInUser(username, email, password) {
+/* verifying user input and saving it */
+function loggedInUser(username, password) {
   if (username !== "" && password !== "") {
     let loggedInUser = new User(username, password);
     userArray.push(loggedInUser);

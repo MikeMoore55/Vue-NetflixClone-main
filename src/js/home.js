@@ -12,6 +12,8 @@ class Movie {
 }
 
 const LOGGED_IN_USER_KEY = "logged-in-user-storage-key";
+const WATCH_LIST_KEY = "watch-list-storage-key";
+
 
 const { createApp } = window.Vue;
 
@@ -225,6 +227,7 @@ const component = {
       userArray: [],
       username: "",
       comingSoon: [],
+      watchList:[]
     }
   },
 
@@ -238,10 +241,27 @@ const component = {
       window.location.href = "/src/pages/watch-list-page.html";
     },
     
-    hoverName(){
-      document.querySelector(".carousel-inner").style.background="background-color: rgba(0,0,0,0.8)"
-      document.querySelector(".carousel-caption").style.display="block"      
-    }
+    addToWatchList(index) {
+      // if WATCH_LIST_KEY is empty
+      if (!localStorage.getItem(WATCH_LIST_KEY)) {
+        let watchListArray = [];
+        watchListArray.push(this.availableList[index]);
+        localStorage.setItem(
+          WATCH_LIST_KEY,
+          JSON.stringify(watchListArray)
+        );
+      } else {
+        // if WATCH_LIST_KEY exits, get array and add movies to array
+        let watchListArray = JSON.parse(
+          localStorage.getItem(WATCH_LIST_KEY)
+        );
+        watchListArray.push(this.availableList[index]);
+        localStorage.setItem(
+          WATCH_LIST_KEY,
+          JSON.stringify(watchListArray)
+        );
+      }
+    },
   },
 
   computed: {
@@ -259,32 +279,35 @@ const component = {
 
   },
 
-/*    <div class="nav">
-     
-    </div>
- */
-
   template: /* html */
     `
-    <nav class="nav">
-     <div class="log-out-div">
-        <ul class="nav-list">
-          <li>        
-            <p class="user-name">{{username}}</p>
-          </li>
-          <li>
-            <button class="my-list" @click="myListBtn">My list</button>
-          </li>
-          <li>
-            <input type="text" placeholder="search movies">
-          </li>
-          <li>
-            <button class="log-out" @click="logout">Log out!</button>
-          </li>
+  
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-override fluid" aria-label="Eleventh navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-logo-img.png" /></a>
+          <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="nav-icon" src="/src/images/menu-icon.png">
+          </button>
 
-        </ul>
-      </div>
-  </nav>
+          <div class="collapse navbar-collapse nav-list-div-override" id="navbarsExample09">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-list-override">
+              <li class="nav-item nav-item-override">
+              <p class="user-name">User: {{username}}</p>
+              </li>
+              <li class="nav-item nav-item-override">
+                <button class="my-list-btn" @click="myListBtn">My Watch-List</button>
+              </li>
+              <li class="nav-item nav-item-override">
+                <button class="log-out" @click="logout">Log out!</button>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    </div>
+
  
 
     <br>
@@ -307,7 +330,8 @@ const component = {
 
                       <h3>{{movie.name}}</h3>
                       <p class="movie-info">{{movie.genre}}</p>
-                      <p class="movie-info">{{movie.availDate}}</p>  
+                      <p class="movie-info">{{movie.availDate}}</p>
+                      <button class="play-btn"><img class="play-icon" src="/src/images/play-icon.png"></button>
                   </div>
                   
               </template>
@@ -344,6 +368,7 @@ const component = {
                     <h3>{{ movie.name }}</h3>
                     <p class="movie-info">{{movie.genre}}</p>
                     <p class="movie-info">{{movie.availDate}}</p>
+                    <button class="add-btn" @click="addToWatchList(index)"><img class="add-icon" src="/src/images/add-icon.png"></button>  
                 </div>
             </template>
         </div>
@@ -365,16 +390,15 @@ const component = {
         <div class="footer-grid">
 
           <p class="footer-grid-wrapper">Audio & Subtitles</p>
-          <p class="footer-grid-wrapper">Audio Desc</p>
           <p class="footer-grid-wrapper">Help</p>
           <p class="footer-grid-wrapper">Gift Cards</p>
 
           <p class="footer-grid-wrapper">Terms of Use</p>
           <p class="footer-grid-wrapper">Privacy</p>
-          <p class="footer-grid-wrapper">Legal Notices</p>
           <p class="footer-grid-wrapper">Cookies</p>
         
         </div>
+        
         <p class="author">© 2022-2022 Michael Moore</p>
 
     </footer>
@@ -392,35 +416,3 @@ window.addEventListener('DOMContentLoaded', () => {
   const app = createApp(component)
   app.mount("#home")
 })
-
-
-
-/*
- <ul class="movie-list">
-        <li class="movie" v-for="(movie, index) in availableList" :key="movie.id">
-        <span class="movie-name">{{ movie.name }}</span>
-        <br/>
-        <img class="movie-img" v-bind:src="movie.thumbnail">
-        <br/>
-        <span class="movie-info">{{ movie.genre }}</span>
-        <br/>
-        <span class="movie-info">{{ movie.availDate }}</span>
-        </li>
-      </ul>
- */
-
-
-/* <div class="carousel">
-       
-        <ul class="coming-list">
-          <li class="coming-soon-movie" v-for="(movie, index) in comingSoonList" :key="movie.id">
-            <span class="coming-soon-movie-name">{{ movie.name }}</span>
-            <br/>
-            <img class="coming-soon-movie-img" v-bind:src="movie.thumbnail">
-            <br/>
-            <span class="coming-soon-movie-info">{{ movie.genre }}</span>
-            <br/>
-            <span class="coming-soon-movie-info">{{ movie.availDate }}</span>
-          </li>
-        </ul>
-      </div> */
