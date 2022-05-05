@@ -35,7 +35,7 @@ const component = {
     addToWatchList(index) {
       if (!localStorage.getItem(WATCH_LIST_KEY)) {
         let watchListArray = [];
-        watchListArray.push(this.availableList[index] && this.comingSoonList[index]);
+        watchListArray.push(this.availableList[index] || this.comingSoonList[index] || this.seriesList[index]);
         localStorage.setItem(
           WATCH_LIST_KEY,
           JSON.stringify(watchListArray)
@@ -44,7 +44,7 @@ const component = {
         let watchListArray = JSON.parse(
           localStorage.getItem(WATCH_LIST_KEY)
         );
-        watchListArray.push(this.availableList[index] && this.comingSoonList[index]);
+        watchListArray.push(this.availableList[index] || this.comingSoonList[index] || this.seriesList[index]);
         localStorage.setItem(
           WATCH_LIST_KEY,
           JSON.stringify(watchListArray)
@@ -76,7 +76,7 @@ const component = {
       <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-override fluid" aria-label="Eleventh navbar example">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix.png" /></a>
+            <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-N-logo-img.png" /></a>
           <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
             <img class="nav-icon" src="/src/images/menu-icon.png">
           </button>
@@ -119,7 +119,7 @@ const component = {
   </nav>
 
   <section class="movie-preview">
-    <video class="movie-video" autoplay muted loop>
+    <video class="movie-video" autoplay loop>
       <source src="../video/black-adam-hero-preview.mp4" type="video/mp4">
     </video>
     <div class="hero-info">
@@ -219,8 +219,9 @@ const component = {
       </div>
     </div>
 
-    <h2>Series</h2>
+   
     <div class="series-small">
+      <h2>Series</h2>
       <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
         
         <div class="carousel-inner">

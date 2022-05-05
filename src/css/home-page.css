@@ -42,9 +42,9 @@ body {
 
 .netflix-logo {
   position: fixed;
-  width: 37%;
-  left: 0%;
-  top: 0%;
+  width: 7%;
+  left: 2%;
+  top: 2%;
   margin: 0%;
   padding: 0%;
   z-index: 5;
@@ -61,9 +61,13 @@ body {
 
 .nav-list-override {
   position: relative;
+  width: 70%;
   top: 30%;
+  left: 30%;
   z-index: 5;
+  background-color: transparent;
 }
+
 
 .nav-btn {
   border: none;
@@ -143,7 +147,7 @@ body {
   position: absolute;
   z-index: 2;
   top: 2%;
-  right: 2%;
+  left: 2%;
 }
 
 .hero-info h1 {
@@ -488,7 +492,7 @@ footer .footer-grid-wrapper:hover {
   }
 
   .netflix-logo {
-    max-width: 15%;
+    max-width: 5em;
   }
 
   .nav-list {

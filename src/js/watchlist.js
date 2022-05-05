@@ -63,7 +63,7 @@ const component = {
   <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-override fluid" aria-label="Eleventh navbar example">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-logo-img.png" /></a>
+      <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-N-logo-img.png" /></a>
       <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
         <img class="nav-icon" src="/src/images/menu-icon.png">
       </button>
@@ -89,8 +89,10 @@ const component = {
 <section class="main">
   <h1 class="list-heading">My List</h1>
 
+  <input type="text" class="search" placeholder="Search Movies">
+
   <ul class="movie-list">
-    <li class="movie-item" v-for="(movie, index) in filterWatchList" :key="movie.id"> 
+    <li class="movie-item" v-for="(movie, index) in watchListArray" :key="movie.id"> 
       <span class="movie-name">{{ movie.name }}</span>
       <br/>
       <img class="movie-img" v-bind:src="movie.thumbnail">
