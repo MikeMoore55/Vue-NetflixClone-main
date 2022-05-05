@@ -103,7 +103,7 @@ const component = {
     </div>
     </div>
     <div class="nav-med">
-      <img class="netflix-logo" src="/src/images/netflix.png" />
+      <img class="netflix-logo" src="/src/images/netflix-N-logo-img.png" />
       <ul class="nav-list">
         <li class="nav-list-item">
           <p class="user-name">{{username}}</p>
@@ -123,12 +123,9 @@ const component = {
       <source src="../video/black-adam-hero-preview.mp4" type="video/mp4">
     </video>
     <div class="hero-info">
-      <h1>COMING SOON!</h1>
       <img src="../images/black-adam.jpg" alt="black-adam">
       <h1>Black Adam</h1>
-      <p>Action</p>
-      
-      <p>21/10/2022</p>
+      <h1>Coming Soon!</h1>
     </div>
   </section>
   
@@ -222,6 +219,7 @@ const component = {
       </div>
     </div>
 
+    <h2>Series</h2>
     <div class="series-small">
       <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
         
