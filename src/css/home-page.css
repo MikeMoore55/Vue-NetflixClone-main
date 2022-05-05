@@ -18,6 +18,14 @@ body {
   display: none;
 }
 
+.series-med{
+  display: none;
+}
+
+.series-small{
+  display: block;
+}
+
 .nav-med {
   display: none;
 }
@@ -171,7 +179,7 @@ body {
 h2 {
   font-size: 2em;
   color: white;
-  margin: 2% 0% 5% 0%;
+  margin: 5% 0% 5% 0%;
   text-decoration: underline #d30408;
   text-transform: capitalize;
   text-align: center;
@@ -260,7 +268,7 @@ footer .footer-grid-wrapper:hover {
   font-size: 1em;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 750px) {
   .comingSoon-small {
     display: none;
   }
@@ -274,6 +282,14 @@ footer .footer-grid-wrapper:hover {
   }
 
   .available-med {
+    display: block;
+  }
+
+  .series-small{
+    display: none;
+  }
+
+  .series-med{
     display: block;
   }
 
@@ -323,7 +339,7 @@ footer .footer-grid-wrapper:hover {
     right: 1%;
     list-style: none;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .comingSoon-movie-item-med {
@@ -341,7 +357,7 @@ footer .footer-grid-wrapper:hover {
     right: 1%;
     list-style: none;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .available-movie-item-med {
@@ -378,7 +394,7 @@ footer .footer-grid-wrapper:hover {
     right: 1%;
     list-style: none;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .series-item {
@@ -404,6 +420,43 @@ footer .footer-grid-wrapper:hover {
     color: grey;
     text-align: center;
     align-items: center;
+  }
+
+  .comingSoon-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  .available-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  .series-item:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  @keyframes hover-change {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.2);
+    }
   }
 }
 
