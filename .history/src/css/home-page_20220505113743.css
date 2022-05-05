@@ -292,7 +292,7 @@ footer .footer-grid-wrapper:hover {
 
   .available-movie-item-med {
     position: relative;
-    width: 96%;
+    width: 94%;
     margin: 2% 2% 2% 2%;
     border: solid red 3px;
   }
@@ -360,10 +360,11 @@ footer .footer-grid-wrapper:hover {
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     z-index: 10;
+    /* position: relative; */
   }
 
-  .available-movie-item-med:hover{
-    margin: 0% 2% 0% 2%;
+  .available-movie-item-med {
+    margin: 0% 4% 0% 4%;
     background-color: black;
     animation-name: hover-change;
     animation-duration: 0.5s;
@@ -380,4 +381,16 @@ footer .footer-grid-wrapper:hover {
       transform: scale(1.2);
     }
   }
+
+  /*  .movie-img{
+    width: 10em;
+  }
+
+  .movie-name{
+    font-size: 1.5em;
+  }
+
+  .movie-info{
+    font-size: 1em;
+  }*/
 }

@@ -6,30 +6,30 @@ body {
   background-color: black;
 }
 
-.hero-preview {
+.hero-preview{
   height: 50%;
   width: 100%;
 }
 
-.comingSoon-med {
+.comingSoon-med{
   display: none;
 }
 
-.available-list-med {
+.available-list-med{
   display: none;
 }
 
-.nav-med {
+.nav-med{
   display: none;
 }
 
-.navbar-override {
-  background-color: transparent;
-  border-radius: none;
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  height: 10%;
+.navbar-override{
+   background-color: transparent;
+   border-radius: none;
+   top: 0%;
+   left: 0%;
+   right: 0%;
+   height: 10%;
 }
 
 .netflix-logo {
@@ -41,37 +41,36 @@ body {
   padding: 0%;
 }
 
-.nav-list-div-override {
+.nav-list-div-override{
   position: fixed;
   top: 10%;
   left: 0%;
   right: 0%;
   background-color: transparent;
 }
-
-.nav-list-override {
-  position: relative;
-  top: 30%;
+.nav-list-override{
+position: relative;
+top: 30%;
 }
 
-.nav-btn {
+.nav-btn{
   border: none;
   background-color: transparent;
 }
 
-.nav-icon {
+.nav-icon{
   position: fixed;
   top: 3%;
   right: 2%;
   width: 2em;
 }
 
-.nav-item-override {
+.nav-item-override{
   color: white;
   text-align: right;
 }
 
-.nav-link-override {
+.nav-link-override{
   color: white;
 }
 
@@ -132,7 +131,7 @@ h3 {
   font-weight: 700;
 }
 
-.movie-item {
+.movie-item{
   text-align: center;
   align-content: center;
 }
@@ -143,23 +142,23 @@ h3 {
   text-align: center;
 }
 
-.play-icon {
+.play-icon{
   width: 100%;
 }
 
-.play-btn {
+.play-btn{
   border: none;
   background-color: transparent;
   width: 4em;
 }
 
-.add-btn {
+.add-btn{
   border: none;
   background-color: transparent;
   width: 5em;
 }
 
-.add-icon {
+.add-icon{
   width: 100%;
 }
 
@@ -209,28 +208,28 @@ footer .footer-grid-wrapper:hover {
 }
 
 
-@media(min-width: 650px) {
-  .comingSoon-small {
+@media(min-width: 650px){
+  .comingSoon-small{
     display: none;
   }
 
-  .comingSoon-med {
+  .comingSoon-med{
     display: block;
   }
 
-  .available-small {
+  .available-small{
     display: none;
   }
 
-  .available-med {
+  .available-med{
     display: block;
   }
 
-  .nav-small {
+  .nav-small{
     display: none;
   }
 
-  .nav-med {
+  .nav-med{
     display: block;
     position: fixed;
     top: 0%;
@@ -242,7 +241,7 @@ footer .footer-grid-wrapper:hover {
     z-index: 2;
   }
 
-  .nav-list {
+  .nav-list{
     position: fixed;
     top: 3%;
     right: 3%;
@@ -253,15 +252,15 @@ footer .footer-grid-wrapper:hover {
     grid-template-columns: 33.3% 33.3% 33.3%;
   }
 
-  .nav-list-item {
+  .nav-list-item{
     margin: 0% 1% 0% 1%;
   }
 
-  .netflix-logo {
+  .netflix-logo{
     width: 20%;
   }
 
-  .comingSoon-list-med {
+  .comingSoon-list-med{
     position: relative;
     top: 15%;
     width: 95%;
@@ -272,66 +271,59 @@ footer .footer-grid-wrapper:hover {
     grid-template-columns: 33.3% 33.3% 33.3%;
   }
 
-  .comingSoon-movie-item-med {
+  .comingSoon-movie-item-med{
     position: relative;
     width: 96%;
     margin: 2% 2% 2% 2%;
     border: solid red 3px;
   }
 
-  .available-list-med {
-    position: relative;
-    top: 15%;
-    width: 95%;
-    left: 1%;
-    right: 1%;
-    list-style: none;
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-  }
-
-  .available-movie-item-med {
-    position: relative;
-    width: 96%;
-    margin: 2% 2% 2% 2%;
-    border: solid red 3px;
-  }
-
-  .movie-img {
+  .movie-img{
     position: relative;
     width: 100%;
     align-items: center;
   }
 
-  .movie-name {
+  .movie-name{
     font-size: 2em;
     color: white;
   }
 
-  .movie-info {
+  .movie-info{
     font-size: 1.5em;
     color: grey;
     text-align: center;
     align-items: center;
   }
 
+  .available-list-med{
+    position: relative;
+    top: 15%;
+    width: 95%;
+    left: 2.5%;
+    right: 2.5%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 1000px){
 
-  .nav-med {
+  .nav-med{
     height: 8%;
   }
 
-  .netflix-logo {
+  .netflix-logo{
     max-width: 15%;
   }
 
-  .nav-list {
+  .nav-list{
     top: 1.5%;
   }
 
-  .comingSoon-list-med {
+  .comingSoon-list-med{
     position: relative;
     top: 15%;
     width: 90%;
@@ -342,7 +334,7 @@ footer .footer-grid-wrapper:hover {
     grid-template-columns: 25% 25% 25% 25%;
   }
 
-  .available-list-med {
+  .available-list-med{
     position: relative;
     top: 15%;
     width: 90%;
@@ -353,31 +345,34 @@ footer .footer-grid-wrapper:hover {
     grid-template-columns: 25% 25% 25% 25%;
   }
 
-  .comingSoon-movie-item-med:hover {
+  .comingSoon-movie-item-med:hover{
     margin: 0% 2% 0% 2%;
     background-color: black;
-    animation-name: hover-change;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    z-index: 10;
-  }
-
-  .available-movie-item-med:hover{
-    margin: 0% 2% 0% 2%;
-    background-color: black;
-    animation-name: hover-change;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    z-index: 10;
+      animation-name: hover-change;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      z-index: 10;
+      /* position: relative; */
   }
 
   @keyframes hover-change {
     from {
       transform: scale(1);
     }
-
     to {
       transform: scale(1.2);
     }
   }
-}
+
+ /*  .movie-img{
+    width: 10em;
+  }
+
+  .movie-name{
+    font-size: 1.5em;
+  }
+
+  .movie-info{
+    font-size: 1em;
+  }*/
+} 

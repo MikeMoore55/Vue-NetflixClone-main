@@ -119,12 +119,12 @@ const component = {
     <br>
 
     <header id="comingSoon-movie" class="comingSoon-movie">
-     <iframe
+    <iframe
     height="600"
     width="100%"
     class="hero-preview" 
-    src>
-    </iframe> 
+    src="/src/video/black-adam-hero-preview.mp4">
+    </iframe>
    
       <h2>coming soon</h2>
 

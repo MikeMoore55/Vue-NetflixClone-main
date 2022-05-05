@@ -292,7 +292,7 @@ footer .footer-grid-wrapper:hover {
 
   .available-movie-item-med {
     position: relative;
-    width: 96%;
+    width: 99%;
     margin: 2% 2% 2% 2%;
     border: solid red 3px;
   }
@@ -354,6 +354,16 @@ footer .footer-grid-wrapper:hover {
   }
 
   .comingSoon-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    /* position: relative; */
+  }
+
+  .available-movie-item-med {
     margin: 0% 2% 0% 2%;
     background-color: black;
     animation-name: hover-change;

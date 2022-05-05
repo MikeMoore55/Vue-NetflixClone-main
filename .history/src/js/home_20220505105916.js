@@ -1,5 +1,6 @@
 
-import { MovieList } from "../classes/movie-list.js";
+
+import { MovieList } from "/src/classes/movie-list";
 
 const LOGGED_IN_USER_KEY = "logged-in-user-storage-key";
 const WATCH_LIST_KEY = "watch-list-storage-key";
@@ -31,6 +32,7 @@ const component = {
     },
 
     addToWatchList(index) {
+      // if WATCH_LIST_KEY is empty
       if (!localStorage.getItem(WATCH_LIST_KEY)) {
         let watchListArray = [];
         watchListArray.push(this.availableList[index] && this.comingSoonList[index]);
@@ -39,6 +41,7 @@ const component = {
           JSON.stringify(watchListArray)
         );
       } else {
+        // if WATCH_LIST_KEY exits, get array and add movies to array
         let watchListArray = JSON.parse(
           localStorage.getItem(WATCH_LIST_KEY)
         );
@@ -119,12 +122,12 @@ const component = {
     <br>
 
     <header id="comingSoon-movie" class="comingSoon-movie">
-     <iframe
+    <iframe
     height="600"
     width="100%"
     class="hero-preview" 
-    src>
-    </iframe> 
+    src="/src/video/black-adam-hero-preview.mp4">
+    </iframe>
    
       <h2>coming soon</h2>
 
@@ -163,7 +166,7 @@ const component = {
       <div class="comingSoon-med">
         <ul class="comingSoon-list-med">
           <li class="comingSoon-movie-item-med" v-for="(movie, index) in comingSoonList" :key="movie.id">
-            
+            <div class="movie-thumbnail-container"></div>
               <img class="movie-img" v-bind:src="movie.thumbnail">
               <br/>
               <span class="movie-name">{{ movie.name }}</span>
@@ -171,7 +174,7 @@ const component = {
               <span class="movie-info">{{ movie.genre }}</span>
               <br/>
               <span class="movie-info">{{ movie.availDate }}</span>
-            
+            </div>
           </li>
           </ul>
       </div>
@@ -217,17 +220,15 @@ const component = {
 
       <div class="available-med">
         <ul class="available-list-med">
-            <li class="available-movie-item-med" v-for="(movie, index) in availableList" :key="movie.id">
-
-              <img class="movie-img" v-bind:src="movie.thumbnail">
-              <br/>
-              <span class="movie-name">{{ movie.name }}</span>
-              <br/>
-              <span class="movie-info">{{ movie.genre }}</span>
-              <br/>
-              <span class="movie-info">{{ movie.availDate }}</span>
-            
-            </li>
+          <li class="available-movie-item-med" v-for="(movie, index) in availableList" :key="movie.id">
+            <span class="movie-name">{{ movie.name }}</span>
+            <br/>
+            <img class="movie-img" v-bind:src="movie.thumbnail">
+            <br/>
+            <span class="movie-info">{{ movie.genre }}</span>
+            <br/>
+            <span class="movie-info">{{ movie.availDate }}</span>
+          </li>
           </ul>
       </div>
 
