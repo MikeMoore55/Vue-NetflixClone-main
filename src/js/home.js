@@ -279,6 +279,7 @@ const component = {
 
   },
 
+
   template: /* html */
     `
   <nav class="nav">
@@ -331,7 +332,11 @@ const component = {
     <br>
 
     <header id="comingSoon-movie" class="comingSoon-movie">
-
+    <iframe
+    height="600"
+    width="100%"
+     class="hero-preview" src="/src/video/black-adam-hero-preview.mp4"></iframe>
+   
       <h2>coming soon</h2>
 
       <div class="comingSoon-small">
@@ -365,19 +370,23 @@ const component = {
           </button>
         </div>
       </div>
+
       <div class="comingSoon-med">
         <ul class="comingSoon-list-med">
           <li class="comingSoon-movie-item-med" v-for="(movie, index) in comingSoonList" :key="movie.id">
-            <span class="movie-name">{{ movie.name }}</span>
-            <br/>
-            <img class="movie-img" v-bind:src="movie.thumbnail">
-            <br/>
-            <span class="movie-info">{{ movie.genre }}</span>
-            <br/>
-            <span class="movie-info">{{ movie.availDate }}</span>
+            <div class="movie-thumbnail-container"></div>
+              <img class="movie-img" v-bind:src="movie.thumbnail">
+              <br/>
+              <span class="movie-name">{{ movie.name }}</span>
+              <br/>
+              <span class="movie-info">{{ movie.genre }}</span>
+              <br/>
+              <span class="movie-info">{{ movie.availDate }}</span>
+            </div>
           </li>
           </ul>
       </div>
+
     </header>
 
     <br>

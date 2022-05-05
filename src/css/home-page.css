@@ -6,6 +6,11 @@ body {
   background-color: black;
 }
 
+.hero-preview{
+  height: 50%;
+  width: 100%;
+}
+
 .comingSoon-med{
   display: none;
 }
@@ -19,7 +24,7 @@ body {
 }
 
 .navbar-override{
-   background-color: rgba(12, 12, 12, 0.8);
+   background-color: transparent;
    border-radius: none;
    top: 0%;
    left: 0%;
@@ -41,7 +46,7 @@ body {
   top: 10%;
   left: 0%;
   right: 0%;
-  background-color: rgba(12, 12, 12, 0.8);
+  background-color: transparent;
 }
 .nav-list-override{
 position: relative;
@@ -232,7 +237,7 @@ footer .footer-grid-wrapper:hover {
     right: 0%;
     height: 10%;
     width: 100%;
-    background-color: black;
+    background-color: transparent;
     z-index: 2;
   }
 
@@ -267,12 +272,15 @@ footer .footer-grid-wrapper:hover {
   }
 
   .comingSoon-movie-item-med{
-    margin: 1% 1% 1% 1%;
-    width: 100%;
+    position: relative;
+    width: 96%;
+    margin: 2% 2% 2% 2%;
+    border: solid red 3px;
   }
 
   .movie-img{
-    width: 12em;
+    position: relative;
+    width: 100%;
     align-items: center;
   }
 
@@ -298,6 +306,7 @@ footer .footer-grid-wrapper:hover {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
   }
+
 }
 
 @media(min-width: 1000px){
@@ -336,7 +345,26 @@ footer .footer-grid-wrapper:hover {
     grid-template-columns: 25% 25% 25% 25%;
   }
 
-  .movie-img{
+  .comingSoon-movie-item-med:hover{
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+      animation-name: hover-change;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      z-index: 10;
+      /* position: relative; */
+  }
+
+  @keyframes hover-change {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+ /*  .movie-img{
     width: 10em;
   }
 
@@ -346,5 +374,5 @@ footer .footer-grid-wrapper:hover {
 
   .movie-info{
     font-size: 1em;
-  }
-}
+  }*/
+} 
