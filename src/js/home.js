@@ -1,5 +1,6 @@
 
 import { MovieList } from "../classes/movie-list.js";
+import { SeriesList } from "../classes/series-list.js";
 
 const LOGGED_IN_USER_KEY = "logged-in-user-storage-key";
 const WATCH_LIST_KEY = "watch-list-storage-key";
@@ -13,6 +14,7 @@ const component = {
   data() {
     return {
       movieList: MovieList,
+      seriesList: SeriesList,
       userArray: [],
       username: "",
       comingSoon: [],
@@ -58,30 +60,6 @@ const component = {
       })
     },
 
-    actionList(){
-      return this.movieList.filter((movie) => {
-        return movie.genre === "Action";
-      })
-    },
-
-    comedyList(){
-      return this.movieList.filter((movie) => {
-        return movie.genre === "comedy";
-      })
-    },
-
-    adventureList(){
-      return this.movieList.filter((movie) => {
-        return movie.genre === "Adventure";
-      })
-    },
-
-    dramaList(){
-      return this.movieList.filter((movie) => {
-        return movie.genre === "Drama";
-      })
-    },
-
     availableList() {
       return this.movieList.filter((movie) => {
         return movie.comingSoon === false;
@@ -98,7 +76,7 @@ const component = {
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-override fluid" aria-label="Eleventh navbar example">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-logo-img.png" /></a>
+              <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix.png" /></a>
               <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
                 <img class="nav-icon" src="/src/images/menu-icon.png">
               </button>
@@ -162,8 +140,8 @@ const component = {
           
           <div class="carousel-inner">
               <template v-for="(movie, index) in comingSoonList">
-                  <div :class="{ 'carousel-item': true, active: index === 0 }" >
-                      <img :src="movie.thumbnail" class="d-block w-10 h-10" :alt="movie.name">
+                  <div :class="{ 'carousel-item': true, active: index === 0 }">
+                      <img :src="movie.thumbnail" class="d-block w-10 h-10" :alt="movie.name"/>
 
                       <h3>{{movie.name}}</h3>
                       <p class="movie-info">{{movie.genre}}</p>
@@ -256,6 +234,22 @@ const component = {
               </li>
           </ul>
         </div>
+        <div class="action-movies-med">
+        <h2>Series</h2>
+        <ul class="series-list">
+          <li class="series-item" v-for="(series, index) in seriesList" :key="series.id">
+            
+              <img class="series-img" v-bind:src="series.thumbnail">
+              <br/>
+              <span class="series-name">{{ series.name }}</span>
+              <br/>
+              <span class="series-info">{{ series.genre }}</span>
+              <br/>
+              <span class="series-info">{{ series.seasons }}</span>
+            
+          </li>
+          </ul>
+      </div>
       </div>
       
 
@@ -295,5 +289,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const app = createApp(component)
   app.mount("#home")
 })
+
+let genreBtn = document.querySelector(".view-genre")
 
 

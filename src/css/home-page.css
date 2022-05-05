@@ -6,7 +6,7 @@ body {
   background-color: black;
 }
 
-.nav{
+.nav {
   z-index: 5;
 }
 
@@ -120,27 +120,27 @@ body {
   text-decoration: underline;
 }
 
-.movie-preview{
+.movie-preview {
   position: relative;
 }
 
-.movie-video{
+.movie-video {
   position: relative;
   z-index: 0;
 }
 
-.hero-info{
+.hero-info {
   position: absolute;
   z-index: 2;
   top: 15%;
   left: 2%;
 }
 
-.hero-info h1{
+.hero-info h1 {
   color: white;
   text-align: center;
 }
- 
+
 .hero-info p {
   color: white;
   text-align: center;
@@ -150,11 +150,11 @@ body {
   width: 17em;
 }
 
-.search{
+.search {
   position: relative;
   width: 30%;
   left: 2%;
-  margin-top: .5%;
+  margin-top: 0.5%;
   padding: 1% 2% 1% 2%;
   background-color: rgba(32, 32, 32, 0.8);
   border: solid #d30408 3px;
@@ -162,7 +162,6 @@ body {
   text-align: left;
   font-size: 1.3em;
 }
-
 
 .comingSoon-movie {
   position: relative;
@@ -261,8 +260,7 @@ footer .footer-grid-wrapper:hover {
   font-size: 1em;
 }
 
-
-@media(min-width: 650px) {
+@media (min-width: 650px) {
   .comingSoon-small {
     display: none;
   }
@@ -304,18 +302,17 @@ footer .footer-grid-wrapper:hover {
     list-style: none;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
-  z-index: 5;
+    z-index: 5;
   }
 
   .nav-list-item {
     margin: 0% 1% 0% 1%;
-  z-index: 5;
+    z-index: 5;
   }
 
   .netflix-logo {
     width: 20%;
-  z-index: 5;
-
+    z-index: 5;
   }
 
   .comingSoon-list-med {
@@ -354,6 +351,7 @@ footer .footer-grid-wrapper:hover {
     border: solid red 3px;
   }
 
+  
   .movie-img {
     position: relative;
     width: 100%;
@@ -372,10 +370,44 @@ footer .footer-grid-wrapper:hover {
     align-items: center;
   }
 
+  .series-list {
+    position: relative;
+    top: 15%;
+    width: 95%;
+    left: 1%;
+    right: 1%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
+  .series-item {
+    position: relative;
+    width: 96%;
+    margin: 2% 2% 2% 2%;
+    border: solid red 3px;
+  }
+  
+  .series-img {
+    position: relative;
+    width: 100%;
+    align-items: center;
+  }
+
+  .series-name {
+    font-size: 2em;
+    color: white;
+  }
+
+  .series-info {
+    font-size: 1.5em;
+    color: grey;
+    text-align: center;
+    align-items: center;
+  }
 }
 
-@media(min-width: 1000px) {
-
+@media (min-width: 1000px) {
   .nav-med {
     height: 8%;
   }
@@ -410,6 +442,17 @@ footer .footer-grid-wrapper:hover {
     grid-template-columns: 25% 25% 25% 25%;
   }
 
+  .series-list {
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
   .comingSoon-movie-item-med:hover {
     margin: 0% 2% 0% 2%;
     background-color: black;
@@ -419,7 +462,16 @@ footer .footer-grid-wrapper:hover {
     z-index: 10;
   }
 
-  .available-movie-item-med:hover{
+  .available-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  .series-item:hover {
     margin: 0% 2% 0% 2%;
     background-color: black;
     animation-name: hover-change;
