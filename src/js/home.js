@@ -58,6 +58,30 @@ const component = {
       })
     },
 
+    actionList(){
+      return this.movieList.filter((movie) => {
+        return movie.genre === "Action";
+      })
+    },
+
+    comedyList(){
+      return this.movieList.filter((movie) => {
+        return movie.genre === "comedy";
+      })
+    },
+
+    adventureList(){
+      return this.movieList.filter((movie) => {
+        return movie.genre === "Adventure";
+      })
+    },
+
+    dramaList(){
+      return this.movieList.filter((movie) => {
+        return movie.genre === "Drama";
+      })
+    },
+
     availableList() {
       return this.movieList.filter((movie) => {
         return movie.comingSoon === false;
@@ -69,63 +93,68 @@ const component = {
 
   template: /* html */
     `
-  <nav class="nav">
-    <div class="nav-small">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-override fluid" aria-label="Eleventh navbar example">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-logo-img.png" /></a>
-            <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-              <img class="nav-icon" src="/src/images/menu-icon.png">
-            </button>
+    <nav class="nav">
+      <div class="nav-small">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-override fluid" aria-label="Eleventh navbar example">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-logo-img.png" /></a>
+              <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <img class="nav-icon" src="/src/images/menu-icon.png">
+              </button>
 
-            <div class="collapse navbar-collapse nav-list-div-override" id="navbarsExample09">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-list-override">
-                <li class="nav-item nav-item-override">
-                  <p class="user-name">User: {{username}}</p>
-                </li>
-                <li class="nav-item nav-item-override">
-                  <button class="my-list-btn" @click="myListBtn">My Watch-List</button>
-                </li>
-                <li class="nav-item nav-item-override">
-                  <button class="log-out" @click="logout">Log out!</button>
-                </li>
-              </ul>
-            
+              <div class="collapse navbar-collapse nav-list-div-override" id="navbarsExample09">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-list-override">
+                  <li class="nav-item nav-item-override">
+                    <p class="user-name">User: {{username}}</p>
+                  </li>
+                  <li class="nav-item nav-item-override">
+                    <button class="my-list-btn" @click="myListBtn">My Watch-List</button>
+                  </li>
+                  <li class="nav-item nav-item-override">
+                    <button class="log-out" @click="logout">Log out!</button>
+                  </li>
+                </ul>
+              
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
-    </div>
-    <div class="nav-med">
-      <img class="netflix-logo" src="/src/images/netflix-logo-img.png" />
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <p class="user-name">{{username}}</p>
-        </li>
-        <li class="nav-list-item">
-          <button class="my-list-btn" @click="myListBtn">Watch-List</button>
-        </li>
-        <li class="nav-list-item">
-          <button class="log-out" @click="logout">Log out!</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
- 
-    <br>
-    <br>
-    <br>
-    <br>
+      <div class="nav-med">
+        <img class="netflix-logo" src="/src/images/netflix.png" />
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <p class="user-name">{{username}}</p>
+          </li>
+          <li class="nav-list-item">
+            <button class="my-list-btn" @click="myListBtn">Watch-List</button>
+          </li>
+          <li class="nav-list-item">
+            <button class="log-out" @click="logout">Log out!</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-    <header id="comingSoon-movie" class="comingSoon-movie">
-     <iframe
-    height="600"
-    width="100%"
-    class="hero-preview" 
-    src>
-    </iframe> 
-   
+    <section class="movie-preview">
+      <video class="movie-video" autoplay muted loop>
+      <source src="../video/black-adam-hero-preview.mp4" type="video/mp4">
+      </video>
+      <div class="hero-info">
+        <h1>COMING SOON!</h1>
+        <img src="../images/black-adam.jpg" alt="black-adam">
+        <h1>Black Adam</h1>
+        <p>Action</p>
+        
+        <p>21/10/2022</p>
+      </div>
+    </section>
+  
+    <header id="myHeader" class="header">
+     
+      <input type="text" class="search" placeholder="Search Movies">
+
       <h2>coming soon</h2>
 
       <div class="comingSoon-small">
@@ -178,11 +207,7 @@ const component = {
 
     </header>
 
-    <br>
-    <br>
-    <br>
-
-    <section id="available-movie" class="available-movie">
+    <section id="my-main" class="main">
         
       <h2>movies</h2>
       <div class="available-small">
@@ -216,20 +241,23 @@ const component = {
       </div>
 
       <div class="available-med">
-        <ul class="available-list-med">
-            <li class="available-movie-item-med" v-for="(movie, index) in availableList" :key="movie.id">
+        <div class="all-movies"></div>
+          <ul class="available-list-med">
+              <li class="available-movie-item-med" v-for="(movie, index) in availableList" :key="movie.id">
 
-              <img class="movie-img" v-bind:src="movie.thumbnail">
-              <br/>
-              <span class="movie-name">{{ movie.name }}</span>
-              <br/>
-              <span class="movie-info">{{ movie.genre }}</span>
-              <br/>
-              <span class="movie-info">{{ movie.availDate }}</span>
-            
-            </li>
+                <img class="movie-img" v-bind:src="movie.thumbnail">
+                <br/>
+                <span class="movie-name">{{ movie.name }}</span>
+                <br/>
+                <span class="movie-info">{{ movie.genre }}</span>
+                <br/>
+                <span class="movie-info">{{ movie.availDate }}</span>
+              
+              </li>
           </ul>
+        </div>
       </div>
+      
 
     </section>
 
@@ -267,3 +295,5 @@ window.addEventListener('DOMContentLoaded', () => {
   const app = createApp(component)
   app.mount("#home")
 })
+
+
