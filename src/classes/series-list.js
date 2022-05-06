@@ -7,7 +7,7 @@ export let SeriesList = [
         "Family Guy",
         "SitCom",
         "20 Seasons",
-        "/src/images/family-guy.jpg",
+        "../images/family-guy.jpg",
         "https://www.youtube.com/watch?v=8VF9CksOKzs"
     ),
 
@@ -16,7 +16,7 @@ export let SeriesList = [
         "Undercover Billionaire",
         "Reality",
         "2 Seasons",
-        "/src/images/undercover-billionaire.jpg",
+        "../images/undercover-billionaire.jpg",
         "https://www.youtube.com/watch?v=lkFv-07Xx2s"
     ),
 
@@ -25,7 +25,7 @@ export let SeriesList = [
         "Rust Valley Restorers",
         "Documentary",
         "4 Seasons",
-        "/src/images/rust-valley.jpg",
+        "../images/rust-valley.jpg",
         "https://www.youtube.com/watch?v=hPLRO1DevtQ",
     ),
 
@@ -34,6 +34,6 @@ export let SeriesList = [
         "Rick And Morty",
         "SitCom",
         "5 Seasons",
-        "/src/images/rick-morty.jpg",
+        "../images/rick-morty.jpg",
         "https://www.youtube.com/watch?v=hl1U0bxTHbY",
     ),]
