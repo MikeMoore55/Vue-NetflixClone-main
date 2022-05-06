@@ -535,6 +535,17 @@ footer .footer-grid-wrapper:hover {
     width: 100%;
   }
 
+  .series-buttons{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+  } 
+
+
   .add-btn{
     background-color: transparent;
     border: none;

@@ -29,7 +29,7 @@ class User {
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   loggedInUser(inputUsername.value, inputPassword.value);
-  window.location.href = "/src/pages/home-page.html";
+  window.location.href = "../pages/home-page.html";
 });
 
 /* verifying user input and saving it */

@@ -32,7 +32,7 @@ const component = {
 
     /* when button is clicked add the movie to watch-list */
     myListBtn() {
-      window.location.href = "/src/pages/watch-list-page.html";
+      window.location.href = "../pages/watch-list-page.html";
     },
 
     addToWatchList(index) {
@@ -93,9 +93,9 @@ const component = {
       <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-override fluid" aria-label="Eleventh navbar example">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="netflix-logo" src="/src/images/netflix-N-logo-img.png" /></a>
+            <a class="navbar-brand" href="#"><img class="netflix-logo" src="../images/netflix-N-logo-img.png" /></a>
           <button class="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
-            <img class="nav-icon" src="/src/images/menu-icon.png">
+            <img class="nav-icon" src="../images/menu-icon.png">
           </button>
 
           <div class="collapse navbar-collapse nav-list-div-override" id="navbarsExample09">
@@ -104,7 +104,7 @@ const component = {
               
               <li class="nav-item nav-item-override">
                 <p class="user-name">
-                <img class="user-pic" src="/src/images/user-icon.png">
+                <img class="user-pic" src="../images/user-icon.png">
                 {{username}}
                 </p>
               </li>
@@ -123,11 +123,11 @@ const component = {
     </div>
     </div>
     <div class="nav-med">
-      <img class="netflix-logo" src="/src/images/netflix-N-logo-img.png" />
+      <img class="netflix-logo" src="../images/netflix-N-logo-img.png" />
       <ul class="nav-list">
         <li class="user-item">
           <p class="user-name">
-          <img class="user-pic" src="/src/images/user-icon.png">
+          <img class="user-pic" src="../images/user-icon.png">
           {{username}}
           </p>
         </li>
@@ -156,7 +156,7 @@ const component = {
   <header id="myHeader" class="header">
 
     <div class="search-container"> 
-      <img class="search-img" src="/src/images/search-icon.png">
+      <img class="search-img" src="../images/search-icon.png">
       <input type="text" class="search" placeholder="Search Movies">
     </div>
 
@@ -220,7 +220,7 @@ const component = {
           <div class="comingSoon-buttons">
             <button class="comingSoon-preview-btn">
             <a :href="movie.preview">
-            <img class="comingSoon-preview-icon" src="/src/images/preview-icon.png"/>
+            <img class="comingSoon-preview-icon" src="../images/preview-icon.png"/>
             </a>
             </button>
           </div>
@@ -246,11 +246,11 @@ const component = {
                 <p class="movie-info">
                 <button class="play-btn">
                 <a :href="movie.preview">
-                <img class="play-icon" src="/src/images/preview-icon.png">
+                <img class="play-icon" src="../images/preview-icon.png">
                 </a>
                 </button>
                   {{movie.availDate}}
-                <button class="add-btn" @click="addToWatchList(index)"><img class="add-icon" src="/src/images/add-icon.png"></button>  
+                <button class="add-btn" @click="addToWatchList(index)"><img class="add-icon" src="../images/add-icon.png"></button>  
                 </p>
               </div>
            </template>
@@ -284,7 +284,7 @@ const component = {
                 </p>                
                 <button class="series-play-btn">
                   <a :href="series.preview">
-                  <img class="play-icon" src="/src/images/preview-icon.png">
+                  <img class="play-icon" src="../images/preview-icon.png">
                   </a>
                 </button>
               </div>
@@ -323,7 +323,7 @@ const component = {
                 </a>
               </button>
               <button class="add-btn" @click="addToWatchList(index)">
-                <img class="add-icon" src="/src/images/add-icon.png"/>
+                <img class="add-icon" src="../images/add-icon.png"/>
               </button>
             </div>
 
@@ -345,10 +345,10 @@ const component = {
             <span class="series-info">{{ series.seasons }}</span>
 
 
-            <div class="buttons">
+            <div class="series-buttons">
             <button class="preview-btn">
             <a :href="series.preview">
-            <img class="preview-icon" src="/src/images/preview-icon.png"/>
+            <img class="preview-icon" src="../images/preview-icon.png"/>
             </a>
             </button>
             </div>
