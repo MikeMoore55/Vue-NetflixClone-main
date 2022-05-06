@@ -9,8 +9,16 @@ Welcome to "Totally-legit-Netflix"
 Totally-legit-Netflix is a Netflix clone built with JavaScript, Vue, Html and CSS. It has the core styling and basic functionality of the actual Netflix.
 
 ## Full Disclosure!
--> The movies & series used in this app are not mine and only the trailer of each can be played for obvious reasons.
--> The movies & series used in this app are not found on Netflix, they are just my preferred movies & series selections.
+- The movies & series used in this app are not mine and only the trailer of each can be played for obvious reasons.
+
+- The movies & series used in this app are not found on Netflix, they are just my preferred movies & series selections.
+
+- style is similar to netflix, but i added my own personal touch
+
+## BackLog
+
+- add series to watch-list
+- add search feature
 
 ## --- How to use --- 
 
