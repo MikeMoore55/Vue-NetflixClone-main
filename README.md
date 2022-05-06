@@ -42,6 +42,7 @@ Totally-legit-Netflix is a Netflix clone built with JavaScript, Vue, Html and CS
 - to log-out, click the log-out button
 [when clicked, data will be erased forever]
 
+## deployment link
 
-
+https://mikemoore55.github.io/Vue-NetflixClone-main/
 
