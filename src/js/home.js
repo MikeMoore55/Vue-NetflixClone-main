@@ -137,21 +137,24 @@ const component = {
     <h2>coming soon</h2>
 
     <div class="comingSoon-small">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          
+    <div class="overlay">
+      <h6> coming-soon </h6>
+    </div>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">  
         <div class="carousel-inner">
           <template v-for="(movie, index) in comingSoonList">
             
               <div :class="{ 'carousel-item': true, active: index === 0 }">
+            
                 <img :src="movie.thumbnail" class="d-block w-10 h-10" :alt="movie.name"/>
 
                 <h3>{{movie.name}}</h3>
                 <p class="movie-info">{{movie.genre}}</p>
                 <p class="movie-info">
-                   <button class="play-btn"><img class="play-icon" src="/src/images/preview-icon.png"></button>
                   {{movie.availDate}}
-                  <button class="add-btn" @click="addToWatchList(index)"><img class="add-icon" src="/src/images/add-icon.png"></button>  
-                </p>
+                </p>                   
+                <button class="comingSoon-play-btn"><img class="play-icon" src="/src/images/preview-icon.png"></button>
+
             </div>
                   
           </template>
@@ -169,8 +172,12 @@ const component = {
       </div>
     </div>
 
-    <div class="comingSoon-med">
+    <div class="comingSoon-med">  
+      
       <ul class="comingSoon-list-med">
+      <div class="overlay">
+        <h6> coming-soon </h6>
+      </div>
         <li class="comingSoon-movie-item-med" v-for="(movie, index) in comingSoonList" :key="movie.id">
               
           <img class="movie-img" v-bind:src="movie.thumbnail">

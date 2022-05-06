@@ -93,7 +93,7 @@ export let MovieList = [
 
     new Movie(
         "f_A33vTJu8",
-        "Fast & Furious Presents: Hobbs & Shaw",
+        "Fast & Furious: Hobbs & Shaw",
         "Action",
         false,
         "02/08/2019",

@@ -206,6 +206,22 @@ body {
   top: 20%;
 }
 
+.overlay { 
+  color:rgba(196, 196, 196, 0.7);
+  position:absolute;
+  z-index:12;
+  top:70%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
+
+h6{
+  font-size: 3em;
+  font-weight: 900;
+}
+
+
 h2 {
   font-size: 2em;
   color: white;
@@ -237,10 +253,20 @@ h3 {
   width: 100%;
 }
 
-.play-btn {
+.comingSoon-play-btn {
+  position: relative;
   border: none;
   background-color: transparent;
-  width: 4em;
+  width: 20%;
+  left: 40%;
+}
+
+
+.play-btn {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 20%;
 }
 
 .add-btn {
@@ -414,12 +440,29 @@ footer .footer-grid-wrapper:hover {
     font-size: 1.3em;
   }
 
+  h2{
+    font-size: 3em;
+  }
+
+  .overlay { 
+    color:rgba(196, 196, 196, 0.7);
+    position:absolute;
+    z-index:12;
+    top:30%;
+    left:0;
+    width:100%;
+    text-align:center;
+  }
+  
+  h6{
+    font-size: 6em;
+    font-weight: 900;
+  }
+
   .comingSoon-list-med {
     position: relative;
     top: 15%;
-    width: 95%;
-    left: 1%;
-    right: 1%;
+    width: 96%;
     list-style: none;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -428,16 +471,15 @@ footer .footer-grid-wrapper:hover {
   .comingSoon-movie-item-med {
     position: relative;
     width: 96%;
-    margin: 2% 2% 2% 2%;
-    border: solid red 3px;
+    margin: 2% 2% 5% 2%;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 1% 1%;
   }
 
   .available-list-med {
     position: relative;
     top: 15%;
-    width: 95%;
-    left: 1%;
-    right: 1%;
+    width: 96%;
     list-style: none;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -446,8 +488,9 @@ footer .footer-grid-wrapper:hover {
   .available-movie-item-med {
     position: relative;
     width: 96%;
-    margin: 2% 2% 2% 2%;
-    border: solid red 3px;
+    margin: 5% 2% 5% 2%;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 1% 1%;
   }
 
   .movie-img {
@@ -471,9 +514,7 @@ footer .footer-grid-wrapper:hover {
   .series-list {
     position: relative;
     top: 15%;
-    width: 95%;
-    left: 1%;
-    right: 1%;
+    width: 96%;
     list-style: none;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -482,8 +523,9 @@ footer .footer-grid-wrapper:hover {
   .series-item {
     position: relative;
     width: 96%;
-    margin: 2% 2% 2% 2%;
-    border: solid red 3px;
+    margin: 5% 2% 5% 2%;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 1% 1%;
   }
 
   .series-img {
@@ -510,7 +552,7 @@ footer .footer-grid-wrapper:hover {
     animation-name: hover-change;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    z-index: 10;
+    z-index: 15;
   }
 
   .available-movie-item-med:hover {
@@ -537,7 +579,7 @@ footer .footer-grid-wrapper:hover {
     }
 
     to {
-      transform: scale(1.2);
+      transform: scale(1.4);
     }
   }
 }
@@ -599,12 +641,27 @@ footer .footer-grid-wrapper:hover {
     color: grey;
   }
 
+  .overlay { 
+    color:rgba(196, 196, 196, 0.7);
+    position:absolute;
+    z-index:12;
+    top:30%;
+    left:0;
+    width:100%;
+    text-align:center;
+  }
+  
+  h6{
+    font-size: 6em;
+    font-weight: 900;
+  }
+
   .comingSoon-list-med {
     position: relative;
     top: 15%;
     width: 90%;
-    left: 5%;
-    right: 5%;
+    left: 2%;
+    right: 2%;
     list-style: none;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -614,8 +671,8 @@ footer .footer-grid-wrapper:hover {
     position: relative;
     top: 15%;
     width: 90%;
-    left: 5%;
-    right: 5%;
+    left: 2%;
+    right: 2%;
     list-style: none;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -625,34 +682,46 @@ footer .footer-grid-wrapper:hover {
     position: relative;
     top: 15%;
     width: 90%;
-    left: 5%;
-    right: 5%;
+    left: 2%;
+    right: 2%;
     list-style: none;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
   }
 
+  .comingSoon-movie-item-med{
+    margin: 5% 5% 5% 5%;
+  }
+
   .comingSoon-movie-item-med:hover {
     margin: 0% 2% 0% 2%;
-    background-color: black;
+    background-color: rgba(32, 32, 32, 0.8);
     animation-name: hover-change;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    z-index: 10;
+    z-index: 15;
+  }
+
+  .available-movie-item-med{
+    margin: 5% 5% 5% 5%;
   }
 
   .available-movie-item-med:hover {
     margin: 0% 2% 0% 2%;
-    background-color: black;
+    background-color: rgba(32, 32, 32, 0.8);
     animation-name: hover-change;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     z-index: 10;
   }
 
+  .series-item{
+    margin: 5% 5% 5% 5%;
+  }
+
   .series-item:hover {
     margin: 0% 2% 0% 2%;
-    background-color: black;
+    background-color: rgba(32, 32, 32, 0.8);
     animation-name: hover-change;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -666,6 +735,7 @@ footer .footer-grid-wrapper:hover {
 
     to {
       transform: scale(1.2);
+      border: solid red 3px;
     }
   }
 }
