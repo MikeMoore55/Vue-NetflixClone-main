@@ -1,0 +1,875 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+/*
+  ---note---
+  
+  -> nav-small= bootstrap nav when screen is smaller than 570px
+  -> nav med= nav when screen is bigger than 570px
+  
+  -> comingSoon-small & available-small & series small = bootstrap carousel for screens smaller thank 570px
+  -> comingSoon-med & available-med & series med = grid display for screens bigger thank 570px
+  
+  i made it so "small" items display none when screen exceeds 570px and "med" displays block, and works the other way round.
+  */
+
+
+.nav {
+  z-index: 5;
+}
+
+.comingSoon-med {
+  display: none;
+}
+
+.available-list-med {
+  display: none;
+}
+
+.series-med {
+  display: none;
+}
+
+.series-small {
+  display: block;
+}
+
+.nav-med {
+  display: none;
+}
+
+.navbar-override {
+  background-color: transparent;
+  border-radius: none;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 10%;
+  z-index: 5;
+}
+
+.netflix-logo {
+  position: fixed;
+  width: 7%;
+  left: 2%;
+  top: 2%;
+  margin: 0%;
+  padding: 0%;
+  z-index: 5;
+}
+
+.nav-list-div-override {
+  position: fixed;
+  top: 10%;
+  left: 0%;
+  right: 0%;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.nav-list-override {
+  position: relative;
+  width: 70%;
+  top: 30%;
+  left: 30%;
+  z-index: 5;
+  background-color: transparent;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.nav-icon {
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  width: 2em;
+  z-index: 5;
+}
+
+.nav-item-override {
+  color: white;
+  text-align: right;
+  z-index: 5;
+}
+
+.nav-link-override {
+  color: white;
+  z-index: 5;
+}
+
+.user-pic{
+  width: 1.5em;
+}
+
+.user-name {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  margin: 2% 2% 2% 2%;
+  z-index: 5;
+}
+
+.my-list-btn {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 2%;
+  border: none;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.my-list-btn:active {
+  text-decoration: underline;
+}
+
+.log-out {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding: 2% 2% 2% 2%;
+  margin: 2% 2% 2% 2%;
+  border: none;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.log-out:active {
+  text-decoration: underline;
+}
+
+.movie-preview {
+  position: relative;
+}
+
+.movie-video {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.hero-info {
+  position: absolute;
+  z-index: 2;
+  top: 2%;
+  left: 2%;
+}
+
+.hero-info:hover {
+  animation-name: hero-change;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: 10;
+  background-color: rgba(32, 32, 32, 0.8);
+  padding: 1% 1% 0.5% 1%;
+}
+
+@keyframes hero-change {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.hero-info img {
+  margin-top: 2%;
+  width: 5.8em;
+}
+
+.hero-info h1 {
+  color: white;
+  font-size: 1em;
+}
+
+.hero-info h3 {
+  font-size: 0.9em;
+  color: grey;
+}
+
+.hero-info h4 {
+  font-size: 0.8em;
+  color: grey;
+}
+
+.search-container{
+  position: relative;
+  width: 70%;
+  left: 15%;
+  right: 15%;
+  display: flex;
+}
+
+.search-img{
+  width: 15%;
+  height: 15%;
+  margin-right: 5%;
+  margin-top: 0.5%;
+}
+
+.search {
+  position: relative;
+  width: 80%;
+  text-align: center;
+  margin-top: 0.5%;
+  padding: 1% 2% 1% 2%;
+  background-color: rgba(32, 32, 32, 0.8);
+  border: solid #d30408 3px;
+  border-radius: 10px;
+  font-size: 1.3em;
+}
+
+.comingSoon-movie {
+  position: relative;
+  top: 20%;
+}
+
+.overlay {
+  color: rgba(196, 196, 196, 0.7);
+  position: absolute;
+  z-index: 12;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+h6 {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+
+h2 {
+  font-size: 2em;
+  color: white;
+  margin: 5% 0% 5% 0%;
+  text-decoration: underline #d30408;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.6em;
+  color: white;
+  font-weight: 700;
+}
+
+.movie-item {
+  text-align: center;
+  align-content: center;
+}
+
+.movie-info {
+  color: gray;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.play-icon {
+  width: 100%;
+}
+
+.comingSoon-play-btn {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 20%;
+  left: 40%;
+}
+
+.play-btn {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  width: 20%;
+}
+
+.add-btn {
+  border: none;
+  background-color: transparent;
+  width: 5em;
+}
+
+.add-icon {
+  width: 100%;
+}
+
+.available-movie {
+  position: relative;
+  top: 60%;
+}
+
+.carousel-inner img {
+  width: 50%;
+  margin: auto;
+}
+
+footer {
+  color: grey;
+  font-size: 13px;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+footer .footer-grid {
+  border-top: solid 2px #890306;
+  padding: 4% 0% 4% 0%;
+  margin: 5% 5% 0% 5%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+footer .footer-grid-wrapper {
+  list-style-type: none;
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+footer .footer-grid-wrapper:hover {
+  text-decoration: underline;
+}
+
+.author {
+  text-align: center;
+  margin: 0% 0% 5% 0%;
+  color: grey;
+  font-size: 1em;
+}
+
+
+/* ---- media queries ---- */
+
+
+@media (min-width: 750px) {
+  .comingSoon-small {
+    display: none;
+  }
+
+  .comingSoon-med {
+    display: block;
+  }
+
+  .available-small {
+    display: none;
+  }
+
+  .available-med {
+    display: block;
+  }
+
+  .series-small {
+    display: none;
+  }
+
+  .series-med {
+    display: block;
+  }
+
+  .nav-small {
+    display: none;
+  }
+
+  .nav-med {
+    display: block;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 10%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 5;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 3%;
+    right: 3%;
+    left: 10%;
+    width: 90%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    z-index: 5;
+  }
+
+  .nav-list-item {
+    margin: 0% 1% 0% 1%;
+    z-index: 5;
+  }
+
+  .user-item{
+    display: flex;
+  }
+
+  .user-pic{
+    width: 1.5em;
+  }
+
+  .user-name{
+    font-size: 1.5em;
+  }
+
+  .netflix-logo {
+    width: 5%;
+    margin: 1%;
+    z-index: 5;
+  }
+
+  .hero-info {
+    top: 4%;
+    left: 2%;
+  }
+
+  .hero-info:hover {
+    animation-name: hero-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 0.5% 1%;
+    margin-top: 1%;
+  }
+
+  @keyframes hero-change {
+    from {
+      transform: scale(1);
+      
+    }
+
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  .hero-info img {
+    width: 11em;
+  }
+
+  .hero-info h1 {
+    font-size: 2em;
+    text-align: left;
+  }
+
+  .hero-info h3 {
+    font-size: 1.5em;
+    color: grey;
+  }
+
+  .hero-info h4 {
+    font-size: 1em;
+    color: grey;
+  }
+
+  .search-container{
+    position: relative;
+    width: 70%;
+    left: 15%;
+    right: 15%;
+    display: flex;
+  }
+  
+  .search-img{
+    width: 12%;
+    height: 12%;
+    margin-right: 3%;
+    margin-top: 0.5%;
+  }
+
+  .search {
+    width: 85%;
+    text-align: center;
+    margin-top: 0.5%;
+    font-size: 1.5em;
+    padding: 1% 1% 1% 1%;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  .buttons{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  } 
+
+  .preview-btn{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .preview-icon{
+    width: 100%;
+  }
+
+  .overlay {
+    color: rgba(196, 196, 196, 0.7);
+    position: absolute;
+    z-index: 12;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  h6 {
+    font-size: 8em;
+    font-weight: 900;
+  }
+
+  .comingSoon-list-med {
+    position: relative;
+    top: 15%;
+    width: 96%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
+  .comingSoon-movie-item-med {
+    position: relative;
+    width: 96%;
+    margin: 2% 2% 5% 2%;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 1% 1%;
+  }
+
+  .comingSoon-buttons{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  } 
+
+  .comingSoon-preview-btn{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .comingSoon-preview-icon{
+    width: 100%;
+  }
+
+  .available-list-med {
+    position: relative;
+    top: 15%;
+    width: 96%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
+  .available-movie-item-med {
+    position: relative;
+    width: 96%;
+    margin: 5% 2% 5% 2%;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 1% 1%;
+  }
+
+  .movie-img {
+    position: relative;
+    width: 100%;
+    align-items: center;
+  }
+
+  .movie-name {
+    font-size: 2em;
+    color: white;
+  }
+
+  .movie-info {
+    font-size: 1.5em;
+    color: grey;
+    text-align: center;
+    align-items: center;
+  }
+
+  .series-list {
+    position: relative;
+    top: 15%;
+    width: 96%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+
+  .series-item {
+    position: relative;
+    width: 96%;
+    margin: 5% 2% 5% 2%;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 1% 1%;
+  }
+
+  .series-img {
+    position: relative;
+    width: 100%;
+    align-items: center;
+  }
+
+  .series-name {
+    font-size: 2em;
+    color: white;
+  }
+
+  .series-info {
+    font-size: 1.5em;
+    color: grey;
+    text-align: center;
+    align-items: center;
+  }
+
+  .comingSoon-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 15;
+  }
+
+  .available-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  .series-item:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: black;
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  @keyframes hover-change {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.2);
+      border: solid red 3px;
+    }
+
+  }
+}
+
+
+/* ---- media queries ---- */
+
+
+@media (min-width: 1000px) {
+  .nav-med {
+    height: 8%;
+  }
+
+  .netflix-logo {
+    top: 0%;
+    left: 0%;
+    max-width: 2.5em;
+  }
+
+  .nav-list {
+    top: 1.5%;
+  }
+
+  .hero-info {
+    top: 3%;
+    left: 3%;
+    padding: 1% 1% 1% 1%;
+  }
+
+  .hero-info:hover {
+    animation-name: hero-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    background-color: rgba(32, 32, 32, 0.8);
+  }
+
+  @keyframes hero-change {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  .hero-info img {
+    width: 15em;
+  }
+
+  .hero-info h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-info h3 {
+    font-size: 1.5em;
+    color: grey;
+  }
+
+  .hero-info h4 {
+    font-size: 1em;
+    color: grey;
+  }
+
+  .overlay {
+    color: rgba(196, 196, 196, 0.7);
+    position: absolute;
+    z-index: 12;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  h6 {
+    font-size: 6em;
+    font-weight: 900;
+  }
+
+  .search-container{
+    position: relative;
+    width: 70%;
+    left: 15%;
+    right: 15%;
+    display: flex;
+  }
+  
+  .search-img{
+    width: 7%;
+    height: 7%;
+    margin-right: 2%;
+    margin-top: 0.5%;
+  }
+  
+  .search {
+    position: relative;
+    width: 90%;
+    text-align: center;
+    margin-top: 0.5%;
+    padding: 1% 2% 1% 2%;
+    background-color: rgba(32, 32, 32, 0.8);
+    border: solid #d30408 3px;
+    border-radius: 10px;
+    font-size: 1.3em;
+  }
+  
+
+  .comingSoon-list-med {
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 2%;
+    right: 2%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .available-list-med {
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 2%;
+    right: 2%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .series-list {
+    position: relative;
+    top: 15%;
+    width: 90%;
+    left: 2%;
+    right: 2%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  .comingSoon-movie-item-med {
+    margin: 5% 5% 5% 5%;
+  }
+
+  .comingSoon-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: rgba(32, 32, 32, 1);
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 15;
+  }
+
+  .available-movie-item-med {
+    margin: 5% 5% 5% 5%;
+  }
+
+  .available-movie-item-med:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: rgba(32, 32, 32, 1);
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  .series-item {
+    margin: 5% 5% 5% 5%;
+  }
+
+  .series-item:hover {
+    margin: 0% 2% 0% 2%;
+    background-color: rgba(32, 32, 32, 1);
+    animation-name: hover-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+  }
+
+  @keyframes hover-change {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.2);
+      border: solid red 3px;
+    }
+  }
+}
