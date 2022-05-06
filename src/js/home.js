@@ -319,7 +319,7 @@ const component = {
             <div class="buttons">
               <button class="preview-btn">
                 <a :href="movie.preview">
-                <img class="preview-icon" src="/src/images/preview-icon.png"/>
+                <img class="preview-icon" src="../images/preview-icon.png"/>
                 </a>
               </button>
               <button class="add-btn" @click="addToWatchList(index)">
