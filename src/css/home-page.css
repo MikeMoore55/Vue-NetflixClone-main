@@ -867,6 +867,36 @@ footer .footer-grid-wrapper:hover {
     z-index: 15;
   }
 
+  .buttons{
+    position: relative;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+  } 
+
+  .preview-btn{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .preview-icon{
+    width: 100%;
+  }
+
+  .series-buttons{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+  } 
+
   .available-movie-item-med {
     margin: 5% 5% 5% 5%;
   }

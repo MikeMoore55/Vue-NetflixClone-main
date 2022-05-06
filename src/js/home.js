@@ -181,7 +181,7 @@ const component = {
                 </p>                   
                 <button class="comingSoon-play-btn">
                   <a :href="movie.preview">
-                  <img class="play-icon" src="/src/images/preview-icon.png">
+                  <img class="play-icon" src="../images/preview-icon.png">
                   </a>
                 </button>
             </div>
