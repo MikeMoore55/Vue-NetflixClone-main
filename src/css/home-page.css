@@ -18,11 +18,11 @@ body {
   display: none;
 }
 
-.series-med{
+.series-med {
   display: none;
 }
 
-.series-small{
+.series-small {
   display: block;
 }
 
@@ -67,7 +67,6 @@ body {
   z-index: 5;
   background-color: transparent;
 }
-
 
 .nav-btn {
   border: none;
@@ -150,15 +149,43 @@ body {
   left: 2%;
 }
 
-.hero-info h1 {
-  color: white;
-  text-align: center;
-  font-size: 1em;
+.hero-info:hover {
+  animation-name: hero-change;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: 10;
+  background-color: rgba(32, 32, 32, 0.8);
+  padding: 1% 1% 0.5% 1%;
+}
+
+@keyframes hero-change {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 .hero-info img {
   margin-top: 2%;
-  width: 6em;
+  width: 5.8em;
+}
+
+.hero-info h1 {
+  color: white;
+  font-size: 1em;
+}
+
+.hero-info h3 {
+  font-size: 0.9em;
+  color: grey;
+}
+
+.hero-info h4 {
+  font-size: 0.8em;
+  color: grey;
 }
 
 .search {
@@ -288,11 +315,11 @@ footer .footer-grid-wrapper:hover {
     display: block;
   }
 
-  .series-small{
+  .series-small {
     display: none;
   }
 
-  .series-med{
+  .series-med {
     display: block;
   }
 
@@ -330,25 +357,55 @@ footer .footer-grid-wrapper:hover {
   }
 
   .netflix-logo {
-    width: 7%;
+    width: 5%;
     margin: 1%;
     z-index: 5;
   }
 
   .hero-info {
-    top: 2%;
+    top: 4%;
     left: 2%;
   }
-  
+
+  .hero-info:hover {
+    animation-name: hero-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 1% 1% 0.5% 1%;
+    margin-top: 1%;
+  }
+
+  @keyframes hero-change {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  .hero-info img {
+    width: 11em;
+  }
+
   .hero-info h1 {
     font-size: 2em;
     text-align: left;
   }
-  
-  .hero-info img {
-    width: 13em;
+
+  .hero-info h3 {
+    font-size: 1.5em;
+    color: grey;
   }
-  
+
+  .hero-info h4 {
+    font-size: 1em;
+    color: grey;
+  }
+
   .search {
     width: 60%;
     left: 20%;
@@ -393,7 +450,6 @@ footer .footer-grid-wrapper:hover {
     border: solid red 3px;
   }
 
-  
   .movie-img {
     position: relative;
     width: 100%;
@@ -429,7 +485,7 @@ footer .footer-grid-wrapper:hover {
     margin: 2% 2% 2% 2%;
     border: solid red 3px;
   }
-  
+
   .series-img {
     position: relative;
     width: 100%;
@@ -492,11 +548,55 @@ footer .footer-grid-wrapper:hover {
   }
 
   .netflix-logo {
-    max-width: 5em;
+    top: 0%;
+    left: 0%;
+    max-width: 2.5em;
   }
 
   .nav-list {
     top: 1.5%;
+  }
+
+  .hero-info {
+    top: 12%;
+    left: 3%;
+    padding: 2% 2% 2% 2%;
+  }
+
+  .hero-info:hover {
+    animation-name: hero-change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    background-color: rgba(32, 32, 32, 0.8);
+  }
+
+  @keyframes hero-change {
+    from {
+      transform: scale(1);
+    }
+
+    to {
+      transform: scale(1.2);
+    }
+  }
+
+  .hero-info img {
+    width: 15em;
+  }
+
+  .hero-info h1 {
+    font-size: 3em;
+  }
+
+  .hero-info h3 {
+    font-size: 2em;
+    color: grey;
+  }
+
+  .hero-info h4 {
+    font-size: 1em;
+    color: grey;
   }
 
   .comingSoon-list-med {

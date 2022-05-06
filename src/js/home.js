@@ -119,13 +119,14 @@ const component = {
   </nav>
 
   <section class="movie-preview">
-    <video class="movie-video" autoplay loop>
+    <video class="movie-video" autoplay mute loop>
       <source src="../video/black-adam-hero-preview.mp4" type="video/mp4">
     </video>
     <div class="hero-info">
       <img src="../images/black-adam.jpg" alt="black-adam">
       <h1>Black Adam</h1>
-      <h1>Coming Soon!</h1>
+      <h3>Coming Soon!</h1>
+      <h4>21/10/2022</h3>
     </div>
   </section>
   
@@ -147,7 +148,7 @@ const component = {
                 <h3>{{movie.name}}</h3>
                 <p class="movie-info">{{movie.genre}}</p>
                 <p class="movie-info">
-                   <button class="play-btn"><img class="play-icon" src="/src/images/play-icon.png"></button>
+                   <button class="play-btn"><img class="play-icon" src="/src/images/preview-icon.png"></button>
                   {{movie.availDate}}
                   <button class="add-btn" @click="addToWatchList(index)"><img class="add-icon" src="/src/images/add-icon.png"></button>  
                 </p>
@@ -199,7 +200,7 @@ const component = {
                 <h3>{{ movie.name }}</h3>
                 <p class="movie-info">{{movie.genre}}</p>
                 <p class="movie-info">
-                <button class="play-btn"><img class="play-icon" src="/src/images/play-icon.png"></button>
+                <button class="play-btn"><img class="play-icon" src="/src/images/preview-icon.png"></button>
                   {{movie.availDate}}
                 <button class="add-btn" @click="addToWatchList(index)"><img class="add-icon" src="/src/images/add-icon.png"></button>  
                 </p>
@@ -231,7 +232,7 @@ const component = {
                 <h3>{{ series.name }}</h3>
                 <p class="movie-info">{{series.genre}}</p>
                 <p class="movie-info">
-                <button class="play-btn"><img class="play-icon" src="/src/images/play-icon.png"></button>
+                <button class="play-btn"><img class="play-icon" src="/src/images/preview-icon.png"></button>
                   {{series.seasons}}
                 <button class="add-btn" @click="addToWatchList(index)"><img class="add-icon" src="/src/images/add-icon.png"></button>  
                 </p>

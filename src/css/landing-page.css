@@ -10,7 +10,7 @@ body{
 
 .netflix-logo{
     position: relative;
-    width: 95%;
+    width: 50%;
     left: 0%;
     top: 4%;
     margin: 0%;
@@ -87,8 +87,8 @@ h2{
     }
 
     .netflix-logo{
-        width: 50%;
-        left: 1%;
+        width: 40%;
+        left: 0%;
     }
 
     h1{
