@@ -32,7 +32,7 @@ const component = {
 
     /* when button is clicked add the movie to watch-list */
     myListBtn() {
-      window.location.href = "../src/pages/watch-list-page.html";
+      window.location.href = "./../pages/watch-list-page.html";
     },
 
     addToWatchList(index) {

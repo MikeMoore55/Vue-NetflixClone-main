@@ -28,7 +28,7 @@ const component = {
     },
 
     homeBtn() {
-      window.location.href = "/src/pages/home-page.html";
+      window.location.href = "./src/pages/home-page.html";
     },
 
     logout() {
