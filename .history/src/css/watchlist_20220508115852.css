@@ -241,7 +241,7 @@ footer {
 
 footer .footer-grid {
   border-top: solid 2px #890306;
-  padding: 4% 0% 1% 0%;
+  padding: 4% 0% 4% 0%;
   margin: 5% 5% 0% 5%;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -250,7 +250,7 @@ footer .footer-grid {
 footer .footer-grid-wrapper {
   list-style-type: none;
   color: white;
-  font-size: 1.15em;
+  font-size: 1.3em;
   text-align: center;
 }
 
@@ -260,7 +260,7 @@ footer .footer-grid-wrapper:hover {
 
 .author {
   text-align: center;
-  margin: 0% 0% 2% 0%;
+  margin: 0% 0% 5% 0%;
   color: grey;
   font-size: 1em;
 }

@@ -190,10 +190,6 @@ h1{
   display: flex;
 } 
 
-.buttons:active{
-  transform: scale(0.9);
-}
-
 .preview-btn{
   background-color: transparent;
   border: none;
@@ -230,40 +226,6 @@ h1{
   transform: scale(0.9);
 }
 
-footer {
-  color: grey;
-  font-size: 13px;
-  position: relative;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
-}
-
-footer .footer-grid {
-  border-top: solid 2px #890306;
-  padding: 4% 0% 1% 0%;
-  margin: 5% 5% 0% 5%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-footer .footer-grid-wrapper {
-  list-style-type: none;
-  color: white;
-  font-size: 1.15em;
-  text-align: center;
-}
-
-footer .footer-grid-wrapper:hover {
-  text-decoration: underline #d30408;
-}
-
-.author {
-  text-align: center;
-  margin: 0% 0% 2% 0%;
-  color: grey;
-  font-size: 1em;
-}
 
 @media(min-width: 570px){
 

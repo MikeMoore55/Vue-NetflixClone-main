@@ -28,7 +28,7 @@ const component = {
     },
 
     homeBtn() {
-      window.location.href = "/src/pages/home-page.html";
+      window.location.href = "/../pages/home-page.html";
     },
 
     logout() {
@@ -73,7 +73,7 @@ const component = {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-list-override">
             <li class="nav-item nav-item-override">
             <p class="user-name">
-              <img class="user-pic" src="/../images/user-icon.png">
+              <img class="user-pic" src="/src/images/user-icon.png">
               {{username}}
             </p>
             </li>
@@ -112,7 +112,7 @@ const component = {
   <h1 class="list-heading">My List</h1>
 
   <div class="search-container"> 
-    <img class="search-img" src="/../images/search-icon.png">
+    <img class="search-img" src="/src/images/search-icon.png">
     <input type="text" v-model="search" class="search" placeholder="Search My Movies">
   </div>
 

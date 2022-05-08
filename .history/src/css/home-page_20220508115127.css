@@ -352,6 +352,8 @@ h3 {
   top: 60%;
 }
 
+
+
 footer {
   color: grey;
   font-size: 13px;
@@ -655,10 +657,6 @@ footer .footer-grid-wrapper:hover {
     margin-top: 10%;
     margin-bottom: 5%;
     display: flex;
-  }
-
-  .buttons:active{
-    transform: scale(0.9);
   }
 
   .preview-btn {

@@ -352,6 +352,8 @@ h3 {
   top: 60%;
 }
 
+
+
 footer {
   color: grey;
   font-size: 13px;
@@ -478,8 +480,6 @@ footer .footer-grid-wrapper:hover {
     z-index: 5;
   }
 
-  /* hero */
-
   .hero-info {
     top: 4%;
     left: 2%;
@@ -495,7 +495,17 @@ footer .footer-grid-wrapper:hover {
     margin-top: 1%;
   }
 
- 
+  @keyframes hero-change {
+    from {
+      transform: scale(1);
+
+    }
+
+    to {
+      transform: scale(1.2);
+    }
+  }
+
   .hero-info img {
     width: 11em;
   }
@@ -515,17 +525,6 @@ footer .footer-grid-wrapper:hover {
     color: grey;
     text-align: center;
   }
-   @keyframes hero-change {
-    from {
-      transform: scale(1);
-
-    }
-
-    to {
-      transform: scale(1.2);
-    }
-  }
-
 
   .search-container {
     position: relative;
@@ -554,6 +553,46 @@ footer .footer-grid-wrapper:hover {
     font-size: 3em;
   }
 
+  .buttons {
+    position: relative;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+  }
+
+  .preview-btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .preview-icon {
+    width: 100%;
+  }
+
+  .series-buttons {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+  }
+
+
+  .add-btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .add-icon {
+    width: 100%;
+  }
 
   .overlay {
     color: rgba(196, 196, 196, 0.7);
@@ -599,18 +638,10 @@ footer .footer-grid-wrapper:hover {
     background-color: transparent;
     border: none;
     width: 100%;
-  } 
-  
-  .comingSoon-preview-btn:active{
-    transform: scale(0.9);
   }
 
   .comingSoon-preview-icon {
     width: 100%;
-  }
-
-  .comingSoon-preview-icon:active{
-    transform: scale(0.9);
   }
 
   .available-list-med {
@@ -647,57 +678,6 @@ footer .footer-grid-wrapper:hover {
     align-items: center;
   }
 
-  .buttons {
-    position: relative;
-    width: 50%;
-    left: 25%;
-    right: 25%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    display: flex;
-  }
-
-  .buttons:active{
-    transform: scale(0.9);
-  }
-
-  .preview-btn {
-    background-color: transparent;
-    border: none;
-    width: 100%;
-  }
-
-  .preview-btn:active{
-    transform: scale(0.9);
-  }
-
-  .preview-icon {
-    width: 100%;
-  }
-
-  .preview-icon:active{
-    transform: scale(0.9);
-  }
-  
-  .add-btn {
-    background-color: transparent;
-    border: none;
-    width: 100%;
-  }
-
-  .add-btn:active{
-    transform: scale(0.9);
-  }
-
-  .add-icon {
-    width: 100%;
-  }
-
-  .add-icon:active{
-    transform: scale(0.9);
-  }
-
-
   .series-list {
     position: relative;
     top: 15%;
@@ -705,16 +685,6 @@ footer .footer-grid-wrapper:hover {
     list-style: none;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
-  }
-  
-  .series-buttons {
-    position: relative;
-    width: 30%;
-    left: 35%;
-    right: 35%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    display: flex;
   }
 
   .series-item {

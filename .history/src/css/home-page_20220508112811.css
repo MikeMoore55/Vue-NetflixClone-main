@@ -106,7 +106,7 @@ body {
   z-index: 5;
 }
 
-.user-pic {
+.user-pic{
   width: 1.5em;
 }
 
@@ -175,7 +175,15 @@ body {
   padding: 1% 1% 0.5% 1%;
 }
 
+@keyframes hero-change {
+  from {
+    transform: scale(0.5);
+  }
 
+  to {
+    transform: scale(1);
+  }
+}
 
 .hero-info img {
   margin-top: 2%;
@@ -197,17 +205,7 @@ body {
   color: grey;
 }
 
-@keyframes hero-change {
-  from {
-    transform: scale(0.5);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-.search-container {
+.search-container{
   position: relative;
   width: 70%;
   left: 15%;
@@ -215,7 +213,7 @@ body {
   display: flex;
 }
 
-.search-img {
+.search-img{
   width: 15%;
   height: 15%;
   margin-right: 5%;
@@ -239,12 +237,11 @@ body {
   top: 20%;
 }
 
-/* coming soon text above coming soon movies */
 .overlay {
   color: rgba(196, 196, 196, 0.7);
   position: absolute;
   z-index: 12;
-  top: 60%;
+  top: 70%;
   left: 0;
   width: 100%;
   text-align: center;
@@ -254,6 +251,7 @@ h6 {
   font-size: 3em;
   font-weight: 900;
 }
+
 
 h2 {
   font-size: 2em;
@@ -270,10 +268,6 @@ h3 {
   color: white;
   font-weight: 700;
 }
-.carousel-inner img {
-  width: 50%;
-  margin: auto;
-}
 
 .movie-item {
   text-align: center;
@@ -286,16 +280,16 @@ h3 {
   text-align: center;
 }
 
+.play-icon {
+  width: 100%;
+}
+
 .comingSoon-play-btn {
   position: relative;
   border: none;
   background-color: transparent;
   width: 20%;
   left: 40%;
-}
-
-.comingSoon-play-btn{
-  transform: scale(0.9);
 }
 
 .series-play-btn {
@@ -306,27 +300,11 @@ h3 {
   left: 40%;
 }
 
-.series-play-btn:active{
-  transform: scale(0.9);
-}
-
 .play-btn {
   position: relative;
   border: none;
   background-color: transparent;
   width: 20%;
-}
-
-.play-btn:active{
-  transform: scale(0.9);
-}
-
-.play-icon {
-  width: 100%;
-}
-
-.play-icon:active{
-  transform: scale(0.9);
 }
 
 .add-btn {
@@ -339,17 +317,14 @@ h3 {
   width: 100%;
 }
 
-.add-btn:active{
-  transform: scale(0.9);
-}
-
-.add-icon:active{
-  transform: scale(0.9);
-}
-
 .available-movie {
   position: relative;
   top: 60%;
+}
+
+.carousel-inner img {
+  width: 50%;
+  margin: auto;
 }
 
 footer {
@@ -377,7 +352,7 @@ footer .footer-grid-wrapper {
 }
 
 footer .footer-grid-wrapper:hover {
-  text-decoration: underline #d30408;
+  text-decoration: underline;
 }
 
 .author {
@@ -392,9 +367,6 @@ footer .footer-grid-wrapper:hover {
 
 
 @media (min-width: 750px) {
-
-/* hide "small" display "med" */
-
   .comingSoon-small {
     display: none;
   }
@@ -432,7 +404,7 @@ footer .footer-grid-wrapper:hover {
     height: 10%;
     width: 100%;
     background-color: transparent;
-    z-index: 20;
+    z-index: 5;
   }
 
   .nav-list {
@@ -452,23 +424,15 @@ footer .footer-grid-wrapper:hover {
     z-index: 5;
   }
 
-  .nav-list-item:active{
-    text-decoration: underline #d30408;
-  }
-
-  .user-item {
+  .user-item{
     display: flex;
   }
 
-  .user-item{
-    text-decoration: underline #d30408;
-  }
-
-  .user-pic {
+  .user-pic{
     width: 1.5em;
   }
 
-  .user-name {
+  .user-name{
     font-size: 1.5em;
   }
 
@@ -477,8 +441,6 @@ footer .footer-grid-wrapper:hover {
     margin: 1%;
     z-index: 5;
   }
-
-  /* hero */
 
   .hero-info {
     top: 4%;
@@ -495,7 +457,17 @@ footer .footer-grid-wrapper:hover {
     margin-top: 1%;
   }
 
- 
+  @keyframes hero-change {
+    from {
+      transform: scale(1);
+      
+    }
+
+    to {
+      transform: scale(1.2);
+    }
+  }
+
   .hero-info img {
     width: 11em;
   }
@@ -515,27 +487,16 @@ footer .footer-grid-wrapper:hover {
     color: grey;
     text-align: center;
   }
-   @keyframes hero-change {
-    from {
-      transform: scale(1);
 
-    }
-
-    to {
-      transform: scale(1.2);
-    }
-  }
-
-
-  .search-container {
+  .search-container{
     position: relative;
     width: 70%;
     left: 15%;
     right: 15%;
     display: flex;
   }
-
-  .search-img {
+  
+  .search-img{
     width: 12%;
     height: 12%;
     margin-right: 3%;
@@ -554,6 +515,46 @@ footer .footer-grid-wrapper:hover {
     font-size: 3em;
   }
 
+  .buttons{
+    position: relative;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+  } 
+
+  .preview-btn{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .preview-icon{
+    width: 100%;
+  }
+
+  .series-buttons{
+    position: relative;
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    display: flex;
+  } 
+
+
+  .add-btn{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+  }
+
+  .add-icon{
+    width: 100%;
+  }
 
   .overlay {
     color: rgba(196, 196, 196, 0.7);
@@ -586,31 +587,23 @@ footer .footer-grid-wrapper:hover {
     padding: 1% 1% 1% 1%;
   }
 
-  .comingSoon-buttons {
+  .comingSoon-buttons{
     position: relative;
     width: 30%;
     left: 35%;
     right: 35%;
     margin-top: 10%;
     margin-bottom: 5%;
-  }
+  } 
 
-  .comingSoon-preview-btn {
+  .comingSoon-preview-btn{
     background-color: transparent;
     border: none;
     width: 100%;
-  } 
-  
-  .comingSoon-preview-btn:active{
-    transform: scale(0.9);
   }
 
-  .comingSoon-preview-icon {
+  .comingSoon-preview-icon{
     width: 100%;
-  }
-
-  .comingSoon-preview-icon:active{
-    transform: scale(0.9);
   }
 
   .available-list-med {
@@ -647,57 +640,6 @@ footer .footer-grid-wrapper:hover {
     align-items: center;
   }
 
-  .buttons {
-    position: relative;
-    width: 50%;
-    left: 25%;
-    right: 25%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    display: flex;
-  }
-
-  .buttons:active{
-    transform: scale(0.9);
-  }
-
-  .preview-btn {
-    background-color: transparent;
-    border: none;
-    width: 100%;
-  }
-
-  .preview-btn:active{
-    transform: scale(0.9);
-  }
-
-  .preview-icon {
-    width: 100%;
-  }
-
-  .preview-icon:active{
-    transform: scale(0.9);
-  }
-  
-  .add-btn {
-    background-color: transparent;
-    border: none;
-    width: 100%;
-  }
-
-  .add-btn:active{
-    transform: scale(0.9);
-  }
-
-  .add-icon {
-    width: 100%;
-  }
-
-  .add-icon:active{
-    transform: scale(0.9);
-  }
-
-
   .series-list {
     position: relative;
     top: 15%;
@@ -705,16 +647,6 @@ footer .footer-grid-wrapper:hover {
     list-style: none;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
-  }
-  
-  .series-buttons {
-    position: relative;
-    width: 30%;
-    left: 35%;
-    right: 35%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    display: flex;
   }
 
   .series-item {
@@ -781,24 +713,11 @@ footer .footer-grid-wrapper:hover {
 
   }
 
-  /* on hover make info and buttons appear */
-  .movie-content {
+  .movie-content{
     display: none;
   }
 
-  .available-movie-item-med:hover .movie-content {
-    display: block;
-  }
-
-  .comingSoon-movie-item-med:hover .movie-content {
-    display: block;
-  }
-
-  .series-content {
-    display: none;
-  }
-
-  .series-item:hover .series-content {
+  .available-movie-item-med:hover .movie-content{
     display: block;
   }
 }
@@ -879,21 +798,21 @@ footer .footer-grid-wrapper:hover {
     font-weight: 900;
   }
 
-  .search-container {
+  .search-container{
     position: relative;
     width: 70%;
     left: 15%;
     right: 15%;
     display: flex;
   }
-
-  .search-img {
+  
+  .search-img{
     width: 7%;
     height: 7%;
     margin-right: 2%;
     margin-top: 0.5%;
   }
-
+  
   .search {
     position: relative;
     width: 90%;
@@ -905,7 +824,7 @@ footer .footer-grid-wrapper:hover {
     border-radius: 10px;
     font-size: 1.3em;
   }
-
+  
 
   .comingSoon-list-med {
     position: relative;
@@ -953,7 +872,7 @@ footer .footer-grid-wrapper:hover {
     z-index: 15;
   }
 
-  .buttons {
+  .buttons{
     position: relative;
     width: 50%;
     left: 25%;
@@ -961,19 +880,19 @@ footer .footer-grid-wrapper:hover {
     margin-top: 10%;
     margin-bottom: 5%;
     display: flex;
-  }
+  } 
 
-  .preview-btn {
+  .preview-btn{
     background-color: transparent;
     border: none;
     width: 100%;
   }
 
-  .preview-icon {
+  .preview-icon{
     width: 100%;
   }
 
-  .series-buttons {
+  .series-buttons{
     position: relative;
     width: 30%;
     left: 35%;
@@ -981,7 +900,7 @@ footer .footer-grid-wrapper:hover {
     margin-top: 10%;
     margin-bottom: 5%;
     display: flex;
-  }
+  } 
 
   .available-movie-item-med {
     margin: 5% 5% 5% 5%;
@@ -1020,11 +939,11 @@ footer .footer-grid-wrapper:hover {
     }
   }
 
-  .movie-content {
+  .movie-content{
     display: none;
   }
 
-  .available-movie-item-med:hover .movie-content {
+  .available-movie-item-med:hover .movie-content{
     display: block;
   }
 }

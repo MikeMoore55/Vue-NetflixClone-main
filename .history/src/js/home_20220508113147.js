@@ -38,7 +38,7 @@ const component = {
     addToWatchList(index) {
       if (!localStorage.getItem(WATCH_LIST_KEY)) {
         let watchListArray = [];
-        watchListArray.push(this.availableList[index]);
+        watchListArray.push(this.availableList[index] || this.comingSoonList[index] || this.seriesList[index]);
         localStorage.setItem(
           WATCH_LIST_KEY,
           JSON.stringify(watchListArray)
@@ -47,7 +47,7 @@ const component = {
         let watchListArray = JSON.parse(
           localStorage.getItem(WATCH_LIST_KEY)
         );
-        watchListArray.push(this.availableList[index]);
+        watchListArray.push(this.availableList[index] || this.comingSoonList[index] || this.seriesList[index]);
         localStorage.setItem(
           WATCH_LIST_KEY,
           JSON.stringify(watchListArray)

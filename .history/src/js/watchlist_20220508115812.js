@@ -73,7 +73,7 @@ const component = {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-list-override">
             <li class="nav-item nav-item-override">
             <p class="user-name">
-              <img class="user-pic" src="/../images/user-icon.png">
+              <img class="user-pic" src="/src/images/user-icon.png">
               {{username}}
             </p>
             </li>
@@ -91,11 +91,11 @@ const component = {
   </div>
 </div>
 <div class="nav-med">
-      <img class="netflix-logo" src="/../images/netflix-N-logo-img.png" />
+      <img class="netflix-logo" src="/src/images/netflix-N-logo-img.png" />
       <ul class="nav-list">
         <li class="user-item">
           <p class="user-name">
-          <img class="user-pic" src="/../images/user-icon.png">
+          <img class="user-pic" src="/src/images/user-icon.png">
           {{username}}
           </p>
         </li>
@@ -112,7 +112,7 @@ const component = {
   <h1 class="list-heading">My List</h1>
 
   <div class="search-container"> 
-    <img class="search-img" src="/../images/search-icon.png">
+    <img class="search-img" src="/src/images/search-icon.png">
     <input type="text" v-model="search" class="search" placeholder="Search My Movies">
   </div>
 
@@ -130,11 +130,11 @@ const component = {
       <div class="buttons">
         <button class="preview-btn">
         <a :href="movie.preview">
-        <img class="preview-icon" src="/../images/preview-icon.png"/>
+        <img class="preview-icon" src="/src/images/preview-icon.png"/>
         </a>
         </button>
         <button class="remove-btn" @click="removeFromWatchList(index)">
-        <img class="remove-icon" src="/../images/cancel-icon.png">
+        <img class="remove-icon" src="/src/images/cancel-icon.png">
         </button>
         </div>   
     </li>
@@ -156,7 +156,7 @@ const component = {
         
     <p class="author">© 2022-2022 Michael Moore</p>
   </footer>
-
+  
   `,
 }
 

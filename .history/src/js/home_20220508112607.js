@@ -38,7 +38,7 @@ const component = {
     addToWatchList(index) {
       if (!localStorage.getItem(WATCH_LIST_KEY)) {
         let watchListArray = [];
-        watchListArray.push(this.availableList[index]);
+        watchListArray.push(this.availableList[index] || this.comingSoonList[index] || this.seriesList[index]);
         localStorage.setItem(
           WATCH_LIST_KEY,
           JSON.stringify(watchListArray)
@@ -47,7 +47,7 @@ const component = {
         let watchListArray = JSON.parse(
           localStorage.getItem(WATCH_LIST_KEY)
         );
-        watchListArray.push(this.availableList[index]);
+        watchListArray.push(this.availableList[index] || this.comingSoonList[index] || this.seriesList[index]);
         localStorage.setItem(
           WATCH_LIST_KEY,
           JSON.stringify(watchListArray)
@@ -211,20 +211,18 @@ const component = {
               
           <img class="movie-img" v-bind:src="movie.thumbnail">
           <br/>
-          <div class="movie-content">
-            <span class="movie-name">{{ movie.name }}</span>
-            <br/>
-            <span class="movie-info">{{ movie.genre }}</span>
-            <br/>
-            <span class="movie-info">{{ movie.availDate }}</span>
+          <span class="movie-name">{{ movie.name }}</span>
+          <br/>
+          <span class="movie-info">{{ movie.genre }}</span>
+          <br/>
+          <span class="movie-info">{{ movie.availDate }}</span>
 
-            <div class="comingSoon-buttons">
-              <button class="comingSoon-preview-btn">
-              <a :href="movie.preview">
-              <img class="comingSoon-preview-icon" src="../images/preview-icon.png"/>
-              </a>
-              </button>
-            </div>
+          <div class="comingSoon-buttons">
+            <button class="comingSoon-preview-btn">
+            <a :href="movie.preview">
+            <img class="comingSoon-preview-icon" src="../images/preview-icon.png"/>
+            </a>
+            </button>
           </div>
               
         </li>
@@ -342,21 +340,19 @@ const component = {
             
             <img class="series-img" v-bind:src="series.thumbnail">
             <br/>
-            <div class="series-content">
-              <span class="series-name">{{ series.name }}</span>
-              <br/>
-              <span class="series-info">{{ series.genre }}</span>
-              <br/>
-              <span class="series-info">{{ series.seasons }}</span>
+            <span class="series-name">{{ series.name }}</span>
+            <br/>
+            <span class="series-info">{{ series.genre }}</span>
+            <br/>
+            <span class="series-info">{{ series.seasons }}</span>
 
 
-              <div class="series-buttons">
-              <button class="preview-btn">
-              <a :href="series.preview">
-              <img class="preview-icon" src="../images/preview-icon.png"/>
-              </a>
-              </button>
-              </div>
+            <div class="series-buttons">
+            <button class="preview-btn">
+            <a :href="series.preview">
+            <img class="preview-icon" src="../images/preview-icon.png"/>
+            </a>
+            </button>
             </div>
             
           </li>
