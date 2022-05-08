@@ -782,7 +782,7 @@ footer .footer-grid-wrapper:hover {
   }
 
   /* on hover make info and buttons appear */
-
+  
   .movie-content {
     display: none;
   }
@@ -1026,28 +1026,6 @@ footer .footer-grid-wrapper:hover {
   }
 
   .available-movie-item-med:hover .movie-content {
-    display: block;
-  }
-
-  /* on hover make info and buttons appear */
-  
-  .movie-content {
-    display: none;
-  }
-
-  .available-movie-item-med:hover .movie-content {
-    display: block;
-  }
-
-  .comingSoon-movie-item-med:hover .movie-content {
-    display: block;
-  }
-
-  .series-content {
-    display: none;
-  }
-
-  .series-item:hover .series-content {
     display: block;
   }
 }
