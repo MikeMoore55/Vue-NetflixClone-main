@@ -1,3 +1,5 @@
+/* local storage keys */
+
 const LOGGED_IN_USER_KEY = "logged-in-user-storage-key";
 const WATCH_LIST_KEY = "watch-list-storage-key";
 
@@ -38,6 +40,8 @@ const component = {
   },
 
   computed: {
+
+    /* property for search bar */
     filterWatchList() {
       return this.watchListArray.filter((movie) => {
         return movie.name.toLowerCase().includes(this.search.toLowerCase());
@@ -46,9 +50,11 @@ const component = {
   },
 
   mounted() {
+    /* get user "info" from local storage */
     this.userArray = JSON.parse(localStorage.getItem(LOGGED_IN_USER_KEY));
     this.username = this.userArray[0]._username;
 
+    /* get user watchlist movies from local storage */
     if (!localStorage.getItem(WATCH_LIST_KEY)) {
       let initArray = [];
       localStorage.setItem(WATCH_LIST_KEY, JSON.stringify(initArray));
@@ -57,7 +63,15 @@ const component = {
     this.watchListArray = JSON.parse(localStorage.getItem(WATCH_LIST_KEY));
   },
 
+/* html template code */
 
+/*
+ -- note --
+ 
+ nav-small is for small screens ( >570px)
+ mav-med is for screens bigger than 570px
+
+ */
   template: /* html */
   `
   <div class="nav-small">

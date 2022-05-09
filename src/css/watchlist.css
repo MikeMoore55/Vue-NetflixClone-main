@@ -1,3 +1,5 @@
+/* mobile first */
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +7,12 @@
 body {
   background-color: black;
 }
+
+/* --note--
+  nav-med is nav for screens bigger than 570px
+  nav-small is nav for screens smaller than 570px
+  [reason: most effective responsive behavior]
+*/
 
 .nav-med {
   display: none;
@@ -265,6 +273,8 @@ footer .footer-grid-wrapper:hover {
   font-size: 1em;
 }
 
+/* ---- MEDIA QUERIES ---- */
+
 @media(min-width: 570px){
 
   .nav-small {
@@ -367,6 +377,8 @@ footer .footer-grid-wrapper:hover {
   } 
 }
 
+/* ---- MEDIA QUERIES ---- */
+
 @media(min-width: 1000px){
 
   h1{
@@ -418,4 +430,3 @@ footer .footer-grid-wrapper:hover {
     width: 85%;
   }
 }
-

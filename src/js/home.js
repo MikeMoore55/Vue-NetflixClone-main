@@ -72,9 +72,15 @@ const component = {
     },
 
   },
+    
+  mounted() {
+    /* to get user "info" from local storage */
+    this.userArray = JSON.parse(localStorage.getItem(LOGGED_IN_USER_KEY));
+    this.username = this.userArray[0]._username;
+  },
 
   /*
-  ---note---
+  --note--
   
   -> nav-small= bootstrap nav when screen is smaller than 570px
   -> nav med= nav when screen is bigger than 570px
@@ -86,6 +92,7 @@ const component = {
   */
 
   /* html code template */
+
   template: /* html */
     `
   <nav class="nav">
@@ -388,13 +395,7 @@ const component = {
   </footer>
   
 `,
-  /*end html */
-
-  mounted() {
-    this.userArray = JSON.parse(localStorage.getItem(LOGGED_IN_USER_KEY));
-    this.username = this.userArray[0]._username;
-  },
-
+  /* end html */
 }
 
 window.addEventListener('DOMContentLoaded', () => {

@@ -1,3 +1,5 @@
+/* mobile first */
+
 * {
   box-sizing: border-box;
 }
@@ -16,6 +18,8 @@ body {
   -> comingSoon-med & available-med & series med = grid display for screens bigger thank 570px
   
   i made it so "small" items display none when screen exceeds 570px and "med" displays block, and works the other way round.
+  
+  [ reason: responsive behavior]
   */
 
 
@@ -388,7 +392,7 @@ footer .footer-grid-wrapper:hover {
 }
 
 
-/* ---- media queries ---- */
+/* ---- MEDIA QUERIES ---- */
 
 
 @media (min-width: 750px) {
@@ -478,8 +482,6 @@ footer .footer-grid-wrapper:hover {
     z-index: 5;
   }
 
-  /* hero */
-
   .hero-info {
     top: 4%;
     left: 2%;
@@ -495,7 +497,6 @@ footer .footer-grid-wrapper:hover {
     margin-top: 1%;
   }
 
- 
   .hero-info img {
     width: 11em;
   }
@@ -515,6 +516,7 @@ footer .footer-grid-wrapper:hover {
     color: grey;
     text-align: center;
   }
+
    @keyframes hero-change {
     from {
       transform: scale(1);
@@ -525,7 +527,6 @@ footer .footer-grid-wrapper:hover {
       transform: scale(1.2);
     }
   }
-
 
   .search-container {
     position: relative;
@@ -553,7 +554,6 @@ footer .footer-grid-wrapper:hover {
   h2 {
     font-size: 3em;
   }
-
 
   .overlay {
     color: rgba(196, 196, 196, 0.7);
@@ -697,7 +697,6 @@ footer .footer-grid-wrapper:hover {
     transform: scale(0.9);
   }
 
-
   .series-list {
     position: relative;
     top: 15%;
@@ -804,9 +803,7 @@ footer .footer-grid-wrapper:hover {
   }
 }
 
-
-/* ---- media queries ---- */
-
+/* ---- MEDIA QUERIES ---- */
 
 @media (min-width: 1000px) {
   .nav-med {
